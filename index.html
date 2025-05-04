@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="hljs.css" />
+ <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+ <title>SimpliSearch</title>
+</head>
+
+<body>
+ <!-- NAV BAR -->
+ <div class="logo">
+  <img src="assets/logo.png" alt="logo" class="logo-img" />
+  <p>SimpliSearch</p>
+  <button class="getStarted">Let's Go</button>
+ </div>
+
+ <main>
+  <!-- HERO SECTION -->
+  <header>
+   <h1>Filter your data more easily and efficiently!</h1>
+   <p>
+    <b>SimpliSearch</b> is an algorithm that makes searching and filtering faster and more effective for JavaScript developers.
+   </p>
+   <div class="btns">
+    <a href="#" class="callToAction">Let's Go!</a>
+   </div>
+   <div class="cards">
+    <div>
+     <h2>Relevant Results</h2>
+     <p>We deliver the most relevant results for every query</p>
+     <ul>
+      <li>Smart algorithm</li>
+      <li>Synonym handling</li>
+      <li>Sorted by highest relevance</li>
+      <li>Supports multiple text formats</li>
+     </ul>
+    </div>
+    <div>
+     <h2>Speed</h2>
+     <p>Instant results, even with hundreds of elements, without requiring a server.</p>
+     <ul>
+      <li>Great for mobile users</li>
+      <li>Works offline</li>
+      <li>Millisecond response time</li>
+     </ul>
+    </div>
+    <div>
+     <h2>Customizable</h2>
+     <p>You can tailor the results to fit your needs</p>
+     <ul>
+      <li>Limit result size</li>
+      <li>Fallback options</li>
+      <li>Access relevance scores</li>
+      <li>And much more...</li>
+     </ul>
+    </div>
+   </div>
+  </header>
+
+  <section style="margin:0px; padding:10px;">
+   <h3 style="width:90%; font-size:16px">Want even more? If yes...</h3>
+  </section>
+
+  <section>
+   <h2>Just One Line!</h2>
+   <p>You only need one line of code to get a filtered and sorted array — instead of dozens.</p>
+   <pre><code class="hljs oneline"></code></pre>
+  </section>
+
+  <section>
+   <h2>Lightweight</h2>
+   <p>Just 5.0 kB — that’s all SimpliSearch needs to provide a smooth and fast experience on any device.</p>
+  </section>
+
+  <section>
+   <h2>Easy Integration</h2>
+   <p>No server setup, no package manager needed, and it works with any JavaScript framework. Just <b>copy and paste</b> as you’ve done many times before.</p>
+  </section>
+
+  <section class="advantagesSection">
+   <div class="container">
+    <h3 style="font-size: 16px;">So...</h3>
+    <h2>
+     without
+     <img src="assets/logo.png" alt="logo" class="logo-img" />
+     SimpliSearch
+    </h2>
+
+    <div class="card red">
+     <img src="assets/red-cross.svg" alt="×" />
+     <p>Hours spent filtering data</p>
+    </div>
+    <div class="card red">
+     <img src="assets/red-cross.svg" alt="×" />
+     <p>Unreliable algorithms</p>
+    </div>
+    <div class="card red">
+     <img src="assets/red-cross.svg" alt="×" />
+     <p>Rewriting logic for every use case</p>
+    </div>
+
+    <h2 style="margin-top:50px;">
+     with
+     <img src="assets/logo.png" alt="logo" class="logo-img" />
+     SimpliSearch
+    </h2>
+
+    <div class="card green">
+     <img src="assets/green-check.svg" alt="✓" />
+     <p>Instant results</p>
+    </div>
+    <div class="card green">
+     <img src="assets/green-check.svg" alt="✓" />
+     <p>High relevance</p>
+    </div>
+    <div class="card green">
+     <img src="assets/green-check.svg" alt="✓" />
+     <p>Plug & play integration</p>
+    </div>
+    <div class="card green">
+     <img src="assets/green-check.svg" alt="✓" />
+     <p>Customizable to your needs</p>
+    </div>
+    <div class="card green">
+     <img src="assets/green-check.svg" alt="✓" />
+     <p>Flexible for any use case</p>
+    </div>
+   </div>
+   <div class="shadow red">t</div>
+   <div class="shadow green">u</div>
+  </section>
+
+  <!-- DOCUMENTATION -->
+  <section class="demo" id="doc">
+   <h2>How to Use It?</h2>
+   <div class="carrousel">
+    <div class="container">
+     <article>
+      <h3>Intro</h3>
+      <p>We’ll show you how <span class="key"><b><i>you</i></b></span> can use SimpliSearch!</p>
+     </article>
+     <article>
+      <h3>The Basics</h3>
+      <p>It all starts with the <code class="code">search()</code> function. It takes an object with two main properties: <span class="key">query</span> and <span class="key">list</span>. The query will be compared to each item in the list.</p>
+     </article>
+     <article>
+      <h3>Conditions</h3>
+      <p>
+       Use these properties to add conditions:
+       <ul>
+        <li><b>minLength</b>: Filters only if the query length is greater or equal to this value</li>
+        <li><b>maxResults</b>: Limits the number of results</li>
+        <li><b>maxScore</b>: Includes items only if their score is below this value</li>
+       </ul>
+      </p>
+     </article>
+     <article>
+      <h3>Formatting</h3>
+      <p>Need to standardize your text format? Use the <code class="code">formatTo</code> property to convert, for example, "hello world" into "hello-world" or "helloWorld".</p>
+     </article>
+     <article>
+      <h3>Targets</h3>
+      <p>If your list contains objects, use the <code class="code">targets</code> property to specify which object keys to compare against the query.</p>
+     </article>
+     <article>
+      <h3>Fallback</h3>
+      <p>If no results match, <code class="code">search()</code> returns an empty array. You can provide a <code class="code">fallback</code> property with content to use instead.</p>
+     </article>
+     <article>
+      <h3>onFinish</h3>
+      <p>Use the <code class="code">onFinish</code> method to receive <b>results</b>, the formatted <b>query</b>, and <b>concated</b> results.</p>
+     </article>
+     <article>
+      <h3>Concatenation</h3>
+      <p>Use the <code class="code">concat</code> property like <code>.map()</code> to build HTML strings, enhance results, or transform output.</p>
+     </article>
+    </div>
+   </div>
+
+   <div class="advice">
+    <div class="container">
+     <div style="display:flex;align-items:center;justify-content:center">
+      <h1>Let's Get Started</h1>
+     </div>
+     <div><pre><code class="hljs"></code></pre></div>
+     <div><pre><code class="hljs"></code></pre></div>
+     <div><pre><code class="hljs"></code></pre></div>
+     <div><pre><code class="hljs"></code></pre></div>
+     <div><pre><code class="hljs"></code></pre></div>
+     <div><pre><code class="hljs"></code></pre></div>
+     <div><pre><code class="hljs"></code></pre></div>
+    </div>
+   </div>
+
+   <div class="buttons">
+    <button class="active"><img src="assets/home.svg" alt="home" /></button>
+    <button>Basics</button>
+    <button>Conditions</button>
+    <button>Formatting</button>
+    <button>Targets</button>
+    <button>Fallback</button>
+    <button>onFinish</button>
+    <button>Concat</button>
+   </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+   <h2>Pricing</h2>
+   <p style="color: var(--light-accent-color)">You’ve seen what it can do — now unlock the magic for yourself.</p>
+   <div class="cardPricing">
+    <p>
+     <span class="price">$19.99</span> <br>
+     for <span class="text">lifetime access</span>
+    </p>
+    <ul>
+     <li>Save time</li>
+     <li>Smart algorithm</li>
+     <li>Fully customizable</li>
+     <li>Blazing fast</li>
+     <li>Includes all features</li>
+    </ul>
+   </div>
+  </section>
+
+  <a href="#" class="callToAction">I want better »</a>
+ </main>
+
+ <!-- JS -->
+ <script type='module'>
+import { initHljs } from "./hljs.js";  
+    
+  const select = s => document.querySelector(s)  
+  const selectAll = s => [...document.querySelectorAll(s)]  
+    
+  const getExemple = async (start) => {  
+   const res = await fetch('./exemples.js')  
+   if (!res.ok) return 'error !!'  
+   const text = await res.text()  
+   start = text.indexOf(start) + start.length  
+   const target = text.slice(  
+    start,  
+    text.indexOf('//end', start)  
+   ).trim()  
+   return target  
+  }  
+    
+  const addExemples = async () => {  
+   const exemples = [  
+    await getExemple('justoneline'),  
+    await getExemple('ex1'),  
+    await getExemple('ex2'),  
+    await getExemple('ex3'),  
+    await getExemple('ex4'),  
+    await getExemple('ex5'),  
+    await getExemple('ex6'),  
+    await getExemple('ex7')  
+   ]  
+     
+   selectAll("pre .hljs").forEach((el, i) => {  
+    el.innerHTML = exemples[i]  
+   })  
+   initHljs()  
+  }  
+  await addExemples()  
+    
+  selectAll('.buttons button').forEach((btn, i) => {  
+   const codes = select('.demo .advice .container')  
+   const cWidth = codes.offsetWidth / 8  
+     
+   const texts = select('.demo .carrousel .container')  
+   const tWidth = texts.offsetWidth / 8  
+     
+   btn.onclick = e => {  
+    select(".buttons button.active").classList.remove('active')  
+    btn.classList.add('active')  
+    codes.style.translate = `-${cWidth*i}px`  
+    texts.style.translate = `-${tWidth*i}px`  
+   }  
+  })  
+    
+  window.addEventListener('scroll', () => {  
+   const scrollY = window.scrollY || document.documentElement.scrollTop;  
+   const t = select('.logo .getStarted')  
+   const t2 = select('.advantagesSection')  
+   if (scrollY > 300) {  
+    t.style.display = 'inline-block'  
+   } else {  
+    t.style.display = 'none'  
+   }  
+   if (scrollY >= 1800) {  
+    t2.style.filter = 'blur(0px)'  
+   }  
+  });  
+ </script>
+
+</body>
+  </html>
