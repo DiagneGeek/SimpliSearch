@@ -1,0 +1,91 @@
+<import name="Header" from="./components/Header.comp" />
+<import name="Arguments" from="./components/Arguments.comp" />
+<import name="Btn" from="./components/Button.comp" />
+<import name="NavBar" from="./components/NavBar.comp" />
+<import name="Circle" from="./components/circle.comp" />
+
+<NavBar>
+  <nav>
+       <a href="#">Let's go</a>
+       <a href="#demo">Demo</a>
+  </nav>
+</NavBar>
+
+<Header>
+   <h1>Filter your data more <b>easily</b> and <b>efficiently</b>!</h1>
+   <p>
+     Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
+   </p>
+   <Btn
+     back="oklch(59.6% 0.145 163.225)"
+     color="white"
+     padding="20px 30px"
+     border="#00C896">Let's go!</Btn>
+     
+  <div class="circles">
+     <Circle big="+Hours" small="spended" />
+     <Circle big="5Kb" small="only" />
+     <Circle big="Flexible" small="by over 10 methods" />
+     <Circle big="Smart" small="with synonyms management" />
+  </div>
+</Header>
+
+<Arguments />
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,450;1,416&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500&display=swap');
+  
+  :root {
+    --background-color: #f4f4f4;
+    --text-color:  #565756;
+    --light-text-color:#838A80 ;
+    --accent-color: oklch(69.6% 0.17 162.48);
+    --secondary-color:#F87171 ;
+    --heading-color: #0a0a0a;
+    --sm-radius: 10px;
+    --lg-radius: 25px;
+    --card-background: rgba(248, 255, 248, 1);
+    --hover-accent-color: linear-gradient();
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  body{
+    background: var(--background-color);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--heading-color);
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Ubuntu", "Montserrat", inter;
+  }
+  
+  p {
+    font-family: "Montserrat", inter;
+    font-size: 14px;
+  }
+  
+  b{
+    color: var(--accent-color);
+  }
+  
+  .circles{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+  }
+</style>
