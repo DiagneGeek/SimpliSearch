@@ -1,0 +1,24 @@
+<import name="Section" from="./components/Section.comp" />
+<import name="Cards" from="./components/Cards.comp" />
+<import name="Card" from="./components/Card.comp" />
+
+<Section>
+  <p class="subtitle">The probleme</p>
+  <h2>Several time and code line to make a filtering algorithm ?</h2>
+  <p class="text">Make a great algorithm for filter data can be hard to make. Even if you made it, you will will spend several hours or days to finish it. There is some probleme inconveniences with this way such as...</p>
+  <Cards color="red" border="indianred">
+    <Card text="Hours spent filtering data" icon="assets/red-cross.svg" />
+    <Card text="Unreliable algorithms" icon="assets/red-cross.svg" />
+    <Card text="Rewriting logic for every use case" icon="assets/red-cross.svg" />
+  </Cards>
+</Section>
+
+<Section>
+  <p class="subtitle">The dream</p>
+  <h2>Got filtered data with just on line</h2>
+  <p class="text">
+    SimpliSearch provide you the dream, that mean it allows you to search, sort and filter your data with just on line of code
+  </p>
+  
+  
+</Section>
