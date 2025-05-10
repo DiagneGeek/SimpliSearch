@@ -1,6 +1,7 @@
 <import name="Section" from="./components/Section.comp" />
 <import name="Cards" from="./components/Cards.comp" />
 <import name="Card" from="./components/Card.comp" />
+<import name="Btn" from="./components/Button.comp" />
 <import name="PricingCard" from="./components/PricingCard.comp" />
 
 <br/> <br/>
@@ -35,6 +36,11 @@
   <PricingCard price="$29.99">
     <li>Unlimited search request</li>
     <li>All methods available</li>
-    <li></li>
+    <li>Plug and play integration</li>
+    <li>Frequently update</li>
+    <li>Fast and reliable</li>
+    <li>for short, all features</li>
   </PricingCard>
+
+  <Btn id="t" padding="1.5rem 2rem" color="white">Get the dream now !</Btn>
 </Section>

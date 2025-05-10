@@ -7,20 +7,24 @@
 
 <style>
  .pricing-card{
-    width: 280px;
+    width: 250px;
     height: 300px;
     border-radius: var(--lg-radius);
     border: solid 3px var(--heading-color);
     margin: 25px 0;
     padding: 10px;
+    background: var(--card-background);
     b{
         font-size:xx-large;
     }
     ul{
-        box-sizing: border-box;
-        padding: 4px 30px;
+        margin-top: 10px; 
         li{
             color: var(--accent-color);
+            font-family: "Montserrat", inter;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 3px 0;
             &::before{
                content: "-";
                padding-right: 4px;

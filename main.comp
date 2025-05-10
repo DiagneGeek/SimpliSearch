@@ -7,7 +7,7 @@
 <NavBar>
   <nav>
        <a href="#docs">Docs</a>
-       <a href="#" class="cta"><Btn back="oklch(69.6% 0.17 162.48)" color="white" padding="10px" id="z">Let's go</Btn></a>
+       <a href="#" class="cta"><Btn color="white" padding="10px" id="z">Let's go</Btn></a>
   </nav>
 </NavBar>
 <main>
@@ -45,7 +45,7 @@
     --heading-color: #0a0a0a;
     --sm-radius: 10px;
     --lg-radius: 25px;
-    --card-background: rgba(248, 255, 248, 1);
+    --card-background: rgba(248, 255, 248, 0.2);
     --hover-accent-color: rgb(100, 200, 160);
   }
   
