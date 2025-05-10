@@ -6,13 +6,13 @@
 
 <NavBar>
   <nav>
-       <a href="#">Let's go</a>
-       <a href="#demo">Demo</a>
+       <a href="#docs">Docs</a>
+       <a href="#" class="cta"><Btn back="oklch(69.6% 0.17 162.48)" color="white" padding="10px" id="z">Let's go</Btn></a>
   </nav>
 </NavBar>
-
+<main>
 <Header>
-   <h1>Filter your data more <b>easily</b> and <b>efficiently</b>!</h1>
+   <h1>Search your data more <b>easily</b> and <b>efficiently</b>!</h1>
    <p>
      Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
    </p>
@@ -20,6 +20,7 @@
      back="oklch(59.6% 0.145 163.225)"
      color="white"
      padding="20px 30px"
+     id="x"
      border="#00C896">Let's go!</Btn>
      
   <div class="circles">
@@ -31,7 +32,7 @@
 </Header>
 
 <Arguments />
-
+</main>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,450;1,416&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500&display=swap');
   
@@ -45,7 +46,7 @@
     --sm-radius: 10px;
     --lg-radius: 25px;
     --card-background: rgba(248, 255, 248, 1);
-    --hover-accent-color: linear-gradient();
+    --hover-accent-color: rgb(100, 200, 160);
   }
   
   * {

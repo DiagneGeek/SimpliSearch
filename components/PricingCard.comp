@@ -1,0 +1,31 @@
+<div class="pricing-card">
+    <h3><b>$price</b><br> for all your live</h3>
+    <ul>
+        $children
+    </ul>
+</div>
+
+<style>
+ .pricing-card{
+    width: 280px;
+    height: 300px;
+    border-radius: var(--lg-radius);
+    border: solid 3px var(--heading-color);
+    margin: 25px 0;
+    padding: 10px;
+    b{
+        font-size:xx-large;
+    }
+    ul{
+        box-sizing: border-box;
+        padding: 4px 30px;
+        li{
+            color: var(--accent-color);
+            &::before{
+               content: "-";
+               padding-right: 4px;
+            }
+        }
+    }
+ }
+</style>

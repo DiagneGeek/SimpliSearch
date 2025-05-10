@@ -1,13 +1,14 @@
 <import name="Section" from="./components/Section.comp" />
 <import name="Cards" from="./components/Cards.comp" />
 <import name="Card" from="./components/Card.comp" />
+<import name="PricingCard" from="./components/PricingCard.comp" />
 
 <br/> <br/>
 <Section>
   <p class="subtitle">The probleme</p>
   <h2>Several time and code line to make a filtering algorithm ?</h2>
   <p class="text">Make a great algorithm for filter data can be hard to make. Even if you made it, you will will spend several hours or days to finish it. There is some probleme inconveniences with this way such as...</p>
-  <Cards color="red" border="indianred">
+  <Cards color="red" border="indianred" id="a">
     <Card text="Hours spent filtering data" icon="assets/red-cross.svg" />
     <Card text="Unreliable algorithms" icon="assets/red-cross.svg" />
     <Card text="Rewriting logic for every use case" icon="assets/red-cross.svg" />
@@ -20,6 +21,20 @@
   <p class="text">
     SimpliSearch provide you the dream, that mean it allows you to search, sort and filter your data with just on line of code
   </p>
-  
-  
+  <Cards color="green" border="oklch(69.6% 0.17 162.48)" id="b">
+    <Card text="Save time and energy" icon="assets/green-check.svg" />
+    <Card text="Customize to your needs" icon="assets/green-check.svg" />
+    <Card text="A codebase less overloaded" icon="assets/green-check.svg" />
+  </Cards>
+</Section>
+
+<Section>
+  <p class="subtitle">Pricing</p>
+  <h2>Invest for better Developer and User Experience</h2>
+  <p>From this simple and easy action you won't got scared to make search systeme for all your life !</p>
+  <PricingCard price="$29.99">
+    <li>Unlimited search request</li>
+    <li>All methods available</li>
+    <li></li>
+  </PricingCard>
 </Section>

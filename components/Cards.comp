@@ -1,9 +1,9 @@
-<div class="cards">
+<div class="cards$id">
   $children
 </div>
 
 <style>
-  .cards{
+  .cards$id{
      width: 100%;
      display: flex;
      align-items: center;
@@ -12,7 +12,9 @@
      margin: 20px 0;
      .card{
        border: solid 2px $border;
-       p{color: $color;}
+       p{
+        color: $color;
+      }
      }
   }
 </style>

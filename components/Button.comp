@@ -1,14 +1,18 @@
-<button class="btn-xyz">$children</button>
+<button class="btn-xyz$id">$children</button>
 
 <style>
-  .btn-xyz{
+  .btn-xyz$id{
     padding: $padding;
     border: solid 2px $border;
     color: $color;
-    background: $back;
-    margin: 10px;
+    background: var(--accent-color);
+    margin: 3px;
     border-radius: var(--lg-radius);
     font-family: "Montserrat";
     font-weight: 600;
+    &:hover{
+      background: var(--hover-accent-color);
+      scale: 0.9;    
+    }
   }
 </style>

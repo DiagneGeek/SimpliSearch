@@ -29,9 +29,12 @@
     }
     nav{
       gap: 20px;
-      padding: 5px;
-      a{
+      padding:0 5px;
+      a:not(.cta){
        font-size: 12px;
+       &:hover{
+        border-bottom: 2px solid var(--accent-color);
+       }
       }
     }
     

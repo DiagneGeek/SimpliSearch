@@ -7,7 +7,7 @@
   .card{
     width: 90%;
     height: 37px;
-    max-width: 500px;
+    max-width: 420px;
     border-radius: var(--sm-radius);
     display: flex;
     align-items: center;
