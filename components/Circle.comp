@@ -1,0 +1,26 @@
+<div class="circle">
+<div>
+ <p class="big">$big</p>
+ <p class="small">$small</p>
+ </div>
+</div>
+
+<style>
+  .circle{
+    border: solid 6px var(--accent-color);
+    width: 140px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--card-background);
+  
+    flex-direction: column;
+    .big{
+      font-size: 30px;
+      margin: 20px 0 0 0;
+      color: var(--accent-color);
+    }
+  }
+</style>
