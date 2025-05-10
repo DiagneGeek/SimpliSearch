@@ -1,0 +1,18 @@
+<div class="cards">
+  $children
+</div>
+
+<style>
+  .cards{
+     width: 100%;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex-direction: column;
+     margin: 20px 0;
+     .card{
+       border: solid 2px $border;
+       p{color: $color;}
+     }
+  }
+</style>
