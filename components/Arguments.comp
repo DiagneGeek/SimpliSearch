@@ -4,33 +4,7 @@
 <import name="Btn" from="./components/Button.comp" />
 <import name="PricingCard" from="./components/PricingCard.comp" />
 
-<style>
-  .fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
 
-  .fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-</style>
-
-<script>
-  console.log("hello")
-    const elements = document.querySelectorAll('.fade-in-section');
-    console.log(elements.length)
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-    });
-
-    elements.forEach((el) => observer.observe(el));
-  });
-</script>
 
 <br/> <br/>
 <Section class="fade-in-section">

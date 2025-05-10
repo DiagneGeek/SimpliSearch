@@ -15,7 +15,7 @@ const compenize = async (url) => {
    s.remove()
    root.appendChild(newScript)
  })
- console.log(document.body.innerHTML)
+ console.log(output)
 }
 
 const fetchFiles = async (url, name) => {
