@@ -1,0 +1,24 @@
+<div class="card">
+  <img src="$icon" alt="icon" />
+  <p>$text</p>
+</div>
+
+<style>
+  .card{
+    width: 90%;
+    height: 37px;
+    max-width: 500px;
+    border-radius: var(--sm-radius);
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    img{
+     width: 25px;
+     height: 25px;
+     margin-right: 5px;
+    }
+    p{
+      font-weight: bold;
+    }
+  }
+</style>
