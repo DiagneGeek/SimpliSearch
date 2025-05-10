@@ -2,7 +2,7 @@
 <import name="Arguments" from="./components/Arguments.comp" />
 <import name="Btn" from="./components/Button.comp" />
 <import name="NavBar" from="./components/NavBar.comp" />
-<import name="Circle" from="./components/circle.comp" />
+<import name="Circle" from="./components/Circle.comp" />
 
 <NavBar>
   <nav>

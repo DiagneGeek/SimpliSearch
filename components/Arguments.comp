@@ -2,6 +2,7 @@
 <import name="Cards" from="./components/Cards.comp" />
 <import name="Card" from="./components/Card.comp" />
 
+<br/> <br/>
 <Section>
   <p class="subtitle">The probleme</p>
   <h2>Several time and code line to make a filtering algorithm ?</h2>
