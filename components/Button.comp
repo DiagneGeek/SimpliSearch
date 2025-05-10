@@ -1,0 +1,14 @@
+<button class="btn-xyz">$children</button>
+
+<style>
+  .btn-xyz{
+    padding: $padding;
+    border: solid 2px $border;
+    color: $color;
+    background: $back;
+    margin: 10px;
+    border-radius: var(--lg-radius);
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+</style>
