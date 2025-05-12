@@ -7,7 +7,7 @@
 
 
 <br/> <br/>
-<Section class="fade-in-section">
+<Section>
   <p class="subtitle">The probleme</p>
   <h2>Several time and code line to make a filtering algorithm ?</h2>
   <p class="text">Make a great algorithm for filter data can be hard to make. Even if you made it, you will will spend several hours or days to finish it. There is some probleme inconveniences with this way such as...</p>
@@ -18,7 +18,7 @@
   </Cards>
 </Section>
 
-<Section class="fade-in-section">
+<Section>
   <p class="subtitle">The dream</p>
   <h2>Got filtered data with just on line</h2>
   <p class="text">
@@ -31,7 +31,15 @@
   </Cards>
 </Section>
 
-<Section class="fade-in-section">
+<Section>
+  <p class="subtitle">What do we provide</p>
+  <h2>+10 options are avaliable for better results in every case</h2>
+  <p>
+    SimpliSearch provide to you several options like formating, conditions, tolerance and so on. They are here to ensure that every need in every situation can be solve easily and efficiently.
+  </p>
+</Section>
+
+<Section>
   <p class="subtitle">Pricing</p>
   <h2>Invest for better Developer and User Experience</h2>
   <p>From this simple and easy action you won't got scared to make search systeme for all your life !</p>
@@ -45,11 +53,11 @@
   </PricingCard>
 </Section>
 
-<Section class="fade-in-section">
+<Section>
   <p class="subtitle">Conclusion</p>
   <h2>Make your life easier</h2>
   <p class="text">With SimpliSearch you can make a search systeme in just one line of code. You can save time and energy for other project. You will not be scared to make a search systeme for all your life !</p>
    <br>
-  <Btn padding="10px" color="white" id="d">Join the dream !</Btn>
+  <Btn padding="14px" id="d">Join the dream !</Btn>
 </Section>
 

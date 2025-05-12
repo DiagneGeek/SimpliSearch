@@ -4,7 +4,7 @@
   .btn-xyz$id{
     padding: $padding;
     border: solid 2px $border;
-    color: $color;
+    color: white;
     background: var(--accent-color);
     margin: 3px;
     border-radius: var(--lg-radius);

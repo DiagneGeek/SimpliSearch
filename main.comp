@@ -7,7 +7,7 @@
 <NavBar>
   <nav>
        <a href="#docs">Docs</a>
-       <a href="#" class="cta"><Btn color="white" padding="10px" id="z">Let's go</Btn></a>
+       <a href="#" class="cta"><Btn padding="10px" id="z">Let's go</Btn></a>
   </nav>
 </NavBar>
 <main>
@@ -17,8 +17,6 @@
      Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
    </p>
    <Btn
-     back="oklch(59.6% 0.145 163.225)"
-     color="white"
      padding="20px 30px"
      id="x"
      border="#00C896">Let's go!</Btn>
@@ -89,4 +87,21 @@
     gap: 20px;
     margin: 40px 0;
   }
+  
+  .flex{
+    display: flex;
+  }
+  .justify-center{
+    justify-content: center;
+  }
+  .items-center{
+    align-items: center;
+  }
+ 
+ .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  
 </style>

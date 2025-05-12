@@ -3,6 +3,10 @@
     <ul>
         $children
     </ul>
+    <br>
+    <div class="center">
+    <Btn padding="10px" id="e">So cheap 》</Btn>
+    </div>
 </div>
 
 <style>
