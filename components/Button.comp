@@ -1,4 +1,4 @@
-<button class="btn-xyz$id">$children</button>
+<button class="btn-xyz$id $class">$children</button>
 
 <style>
   .btn-xyz$id{

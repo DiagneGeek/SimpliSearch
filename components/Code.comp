@@ -1,0 +1,19 @@
+<pre>
+<code class="$class">$children</code>
+</pre>
+
+<style>
+   pre{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     code{
+       border: solid 2px var(--accent-color);
+       border-radius: var(--md-radius);
+       padding: 35px;
+       width: 100%;
+       max-width: 500px;
+       box-sizing: border-box;
+   }
+   }
+</style>

@@ -28,7 +28,7 @@
       }
     }
     nav{
-      gap: 20px;
+      gap: 10px;
       padding:0 5px;
       a:not(.cta){
        font-size: 12px;

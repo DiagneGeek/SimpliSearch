@@ -3,7 +3,7 @@
 <import name="Card" from="./components/Card.comp" />
 <import name="Btn" from="./components/Button.comp" />
 <import name="PricingCard" from="./components/PricingCard.comp" />
-
+<import name="Code" from="./components/Code.comp" />
 
 
 <br/> <br/>
@@ -33,17 +33,32 @@
 
 <Section>
   <p class="subtitle">What do we provide</p>
-  <h2>+10 options are avaliable for better results in every case</h2>
-  <p>
+  <h2>+20 options are avaliable for better results in every case</h2>
+  <p class="text">
     SimpliSearch provide to you several options like formating, conditions, tolerance and so on. They are here to ensure that every need in every situation can be solve easily and efficiently.
   </p>
+  <br><br>
+  <Code class="hljs shadow js shadow">
+  const todos = [...]
+  
+  const searchCompletedTodos = () => {
+    const results = search({ 
+      query: text, 
+      list: todos,
+      targets: [{keyName: "title", weight: 0.8}, {keyName: "description", weight: 0.5}],
+      when: (todo) => todo.completed == true,
+      maxResults: 5
+      ...
+    })
+  }
+  </Code>
 </Section>
 
 <Section>
   <p class="subtitle">Pricing</p>
   <h2>Invest for better Developer and User Experience</h2>
   <p>From this simple and easy action you won't got scared to make search systeme for all your life !</p>
-  <PricingCard price="$29.99">
+  <PricingCard price="$39.99">
     <li>Unlimited search request</li>
     <li>All methods available</li>
     <li>Plug and play integration</li>

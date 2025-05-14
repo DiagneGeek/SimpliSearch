@@ -6,42 +6,75 @@
 
 <NavBar>
   <nav>
-       <a href="#docs">Docs</a>
-       <a href="#" class="cta"><Btn padding="10px" id="z">Let's go</Btn></a>
+    <a href="">Exemples</a>
+    <a href="#docs">Guide</a>
+    <a href="#" class="cta">
+      <Btn padding="10px" id="z">Let's go</Btn>
+    </a>
   </nav>
 </NavBar>
 <main>
-<Header>
-   <h1>Search your data more <b>easily</b> and <b>efficiently</b>!</h1>
-   <p>
-     Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
-   </p>
-   <Btn
-     padding="20px 30px"
-     id="x"
-     border="#00C896">Let's go!</Btn>
-     
-  <div class="circles">
-     <Circle big="+Hours" small="spended" />
-     <Circle big="5Kb" small="only" />
-     <Circle big="Flexible" small="by over 10 methods" />
-     <Circle big="Smart" small="with synonyms management" />
-  </div>
-</Header>
-
-<Arguments />
+  <Header>
+    <h1>Build smarter search systems. <br> <b>With less code</b></h1>
+    <p>
+      Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
+    </p>
+    <a href="/login">
+      <Btn padding="20px 30px" id="x" border="#00C896" class="shadow">Let's go!</Btn>
+    </a>
+    
+    <div class="circles">
+      <Circle big="+Hours" small="spended" />
+      <Circle big="5Kb" small="only" />
+      <Circle big="Flexible" small="by over 10 methods" />
+      <Circle big="Smart" small="with synonyms management" />
+    </div>
+  </Header>
+  
+  <Arguments />
 </main>
+
+<footer style="
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+">
+  <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--heading-color);">
+    SimpliSearch
+  </div>
+
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+    <a href="/guide" style="color: var(--light-text-color); font-size: 14px;">Guide</a>
+    <a href="/pricing" style="color: var(--light-text-color); font-size: 14px;">pricing</a>
+    <a href="/feedback" style="color: var(--light-text-color); font-size: 14px;">Feedback</a>
+    <a href="/legal" style="color: var(--light-text-color); font-size: 14px;">legal</a>
+  </div>
+
+  <div style="font-size: 13px; color: var(--light-text-color);">
+    &copy; 2025 SimpliSearch.
+  </div>
+</footer>
+
+
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,450;1,416&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,480;1,416&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500&display=swap');
   
   :root {
     --background-color: #f4f4f4;
-    --text-color:  #565756;
-    --light-text-color:#838A80 ;
+    --text-color: #565756;
+    --light-text-color: #838A80;
     --accent-color: oklch(69.6% 0.17 162.48);
-    --secondary-color:#F87171 ;
+    --secondary-color: #F87171;
     --heading-color: #0a0a0a;
     --sm-radius: 10px;
+    --md-radius: 16px;
     --lg-radius: 25px;
     --card-background: rgba(248, 255, 248, 0.2);
     --hover-accent-color: rgb(100, 200, 160);
@@ -57,7 +90,7 @@
     text-decoration: none;
   }
   
-  body{
+  body {
     background: var(--background-color);
   }
   
@@ -76,11 +109,11 @@
     font-size: 14px;
   }
   
-  b{
+  b {
     color: var(--accent-color);
   }
   
-  .circles{
+  .circles {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -88,20 +121,34 @@
     margin: 40px 0;
   }
   
-  .flex{
+  .flex {
     display: flex;
   }
-  .justify-center{
-    justify-content: center;
-  }
-  .items-center{
-    align-items: center;
-  }
- 
- .center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
   
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shadow {
+    box-shadow: 2px -1px 20px var(--accent-color);
+  }
+  
+  .size-2 {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .gap-1 {
+    gap: 4px;
+  }
 </style>
