@@ -14,787 +14,741 @@
 </head>
 
 <body>
- <div class="nav-bar">
-  <div class="logo">
-   <img src="/assets/logo.png" alt="logo" class="logoIcon" />
-   
-   <style>
-    .logoIcon {
-     width: 28px;
-     height: 28px;
-    }
-   </style>
-   
-   <p>simplisearch</p>
-  </div>
-  <nav>
-   <a href="">Exemples</a>
-   <a href="pages/guide">Guide</a>
-   <a href="pages/login" class="cta">
-    <button class="btn-xyzz $class">Let's go</button>
-    
-    <style>
-     .btn-xyzz {
-      padding: 10px;
-      border: solid 2px $border;
-      color: white;
-      background: var(--accent-color);
-      margin: 3px;
-      border-radius: var(--lg-radius);
-      font-family: "Montserrat";
-      font-weight: 600;
+<div class="nav-bar">
+ <div class="logo">
+ <img src="/assets/logo.png" alt="logo" class="logoIcon" />
 
-      &:hover {
-       background: var(--hover-accent-color);
-       scale: 0.9;
-      }
-     }
-    </style>
-    
-   </a>
-  </nav>
+<style>
+ .logoIcon{
+ width: 28px;
+ height: 28px;
+ }
+</style>
+
+ <p>simplisearch</p>
  </div>
+ <nav>
+ <a href="">Exemples</a>
+ <a href="pages/guide">Guide</a>
+ <a href="pages/login" class="cta">
+  <button class="btn-xyzz $class">Let's go</button>
+
+<style>
+ .btn-xyzz{
+ padding: 10px;
+ border: solid 2px $border;
+ color: white;
+ background: var(--accent-color);
+ margin: 3px;
+ border-radius: var(--lg-radius);
+ font-family: "Montserrat";
+ font-weight: 600;
+ &:hover{
+  background: var(--hover-accent-color);
+  scale: 0.9; 
+ }
+ }
+</style>
+
+ </a>
+ </nav>
+</div>
+
+<style>
+ .nav-bar {
+ &, .logo,
+ nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ z-index: 99;
+ background: rgba(0, 50, 0, 0.05);
+ backdrop-filter: blur(30px);
  
- <style>
-  .nav-bar {
-
-   &,
-   .logo,
-   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   }
-   
-   z-index: 99;
-   background: rgba(0, 50, 0, 0.05);
-   backdrop-filter: blur(30px);
-   
-   .logo {
-    width: 100px;
-
-    p {
-     font-weight: bold;
-    }
-   }
-   
-   nav {
-    gap: 10px;
-    padding: 0 5px;
-
-    a:not(.cta) {
-     font-size: 12px;
-
-     &:hover {
-      border-bottom: 2px solid var(--accent-color);
-     }
-    }
-   }
-   
-   border-radius: var(--lg-radius);
-   padding: 10px;
-   width: 90%;
-   max-width: 500px;
-   border: solid 1px gray;
-   position: fixed;
-   top: 2%;
-   left: 50%;
-   translate: -50%;
+ .logo{
+  width: 100px;
+  p{
+  font-weight: bold;
   }
- </style>
- <main>
-  <header>
-   <h1>Build smarter search systems. <br> <b>With less code</b></h1>
-   <p>
-    Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
-   </p>
-   <a href="/pages/login">
-    <button class="btn-xyzx shadow">Start now</button>
-    
-    <style>
-     .btn-xyzx {
-      padding: 20px 30px;
-      border: solid 2px #00C896;
-      color: white;
-      background: var(--accent-color);
-      margin: 3px;
-      border-radius: var(--lg-radius);
-      font-family: "Montserrat";
-      font-weight: 600;
-
-      &:hover {
-       background: var(--hover-accent-color);
-       scale: 0.9;
-      }
-     }
-    </style>
-    
-   </a>
-   
-   <div class="circles">
-    <div class="circle">
-     <div>
-      <p class="big">+Hours</p>
-      <p class="small">saved</p>
-     </div>
-    </div>
-    
-    <style>
-     .circle {
-      border: solid 6px var(--accent-color);
-      width: 140px;
-      height: 130px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--card-background);
-      
-      flex-direction: column;
-
-      .big {
-       font-size: 30px;
-       margin: 20px 0 0 0;
-       color: var(--accent-color);
-      }
-     }
-    </style>
-    
-    <div class="circle">
-     <div>
-      <p class="big">5Kb</p>
-      <p class="small">only</p>
-     </div>
-    </div>
-    
-    <style>
-     .circle {
-      border: solid 6px var(--accent-color);
-      width: 140px;
-      height: 130px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--card-background);
-      
-      flex-direction: column;
-
-      .big {
-       font-size: 30px;
-       margin: 20px 0 0 0;
-       color: var(--accent-color);
-      }
-     }
-    </style>
-    
-    <div class="circle">
-     <div>
-      <p class="big">Flexible</p>
-      <p class="small">20+ filtering methods</p>
-     </div>
-    </div>
-    
-    <style>
-     .circle {
-      border: solid 6px var(--accent-color);
-      width: 140px;
-      height: 130px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--card-background);
-      
-      flex-direction: column;
-
-      .big {
-       font-size: 30px;
-       margin: 20px 0 0 0;
-       color: var(--accent-color);
-      }
-     }
-    </style>
-    
-    <div class="circle">
-     <div>
-      <p class="big">Smart</p>
-      <p class="small">built-in synonim support</p>
-     </div>
-    </div>
-    
-    <style>
-     .circle {
-      border: solid 6px var(--accent-color);
-      width: 140px;
-      height: 130px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--card-background);
-      
-      flex-direction: column;
-
-      .big {
-       font-size: 30px;
-       margin: 20px 0 0 0;
-       color: var(--accent-color);
-      }
-     }
-    </style>
-    
-   </div>
-  </header>
-  
-  <style>
-   @keyframes fadeInDown {
-    from {
-     opacity: 0;
-     transform: translateY(-20px);
-    }
-    
-    to {
-     opacity: 1;
-     transform: translateY(0);
-    }
-   }
-   
-   header {
-    padding: 10px 0 100px 0;
-    margin-bottom: 50px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    animation: fadeInDown 1s ease-out forwards;
-    
-    h1 {
-     font-size: clamp(3rem, 5vw, 5rem);
-     margin-bottom: 20px;
-     animation: fadeInDown 1s ease-out 0.2s forwards;
-     opacity: 0;
-    }
-    
-    p {
-     max-width: 450px;
-     text-align: center;
-     margin-bottom: 40px;
-     animation: fadeInDown 1s ease-out 0.4s forwards;
-     opacity: 0;
-    }
-    
-    button {
-     margin: 40px 0;
-     animation: fadeInDown 1s ease-out 0.6s forwards;
-     opacity: 0;
-    }
-    
-    .circles {
-     animation: fadeInDown 1s ease-out 0.8s forwards;
-     opacity: 0;
-    }
-   }
-  </style>
-  
-  
-  <br /> <br />
-  <section class="fade-in-section">
-   <p class="subtitle">The probleme</p>
-   <h2>Several time and code line to make a filtering algorithm ?</h2>
-   <p class="text">Make a great algorithm for filter data can be hard to make. Even if you made it, you will will spend several hours or days to finish it. There is some probleme inconveniences with this way such as...</p>
-   <div class="cardsa">
-    <div class="card">
-     <img src="assets/red-cross.svg" alt="icon" />
-     <p>Hours spent filtering data</p>
-    </div>
-    
-    <style>
-     .card {
-      width: 90%;
-      height: 37px;
-      max-width: 420px;
-      border-radius: var(--sm-radius);
-      display: flex;
-      align-items: center;
-      padding: 3px 5px;
-      background-color: var(--card-background);
-
-      img {
-       width: 25px;
-       height: 25px;
-       margin-right: 5px;
-      }
-      
-      p {
-       font-weight: bold;
-      }
-     }
-    </style>
-    
-    <div class="card">
-     <img src="assets/red-cross.svg" alt="icon" />
-     <p>Unreliable algorithms</p>
-    </div>
-    
-    <style>
-     .card {
-      width: 90%;
-      height: 37px;
-      max-width: 420px;
-      border-radius: var(--sm-radius);
-      display: flex;
-      align-items: center;
-      padding: 3px 5px;
-      background-color: var(--card-background);
-
-      img {
-       width: 25px;
-       height: 25px;
-       margin-right: 5px;
-      }
-      
-      p {
-       font-weight: bold;
-      }
-     }
-    </style>
-    
-    <div class="card">
-     <img src="assets/red-cross.svg" alt="icon" />
-     <p>Rewriting logic for every use case</p>
-    </div>
-    
-    <style>
-     .card {
-      width: 90%;
-      height: 37px;
-      max-width: 420px;
-      border-radius: var(--sm-radius);
-      display: flex;
-      align-items: center;
-      padding: 3px 5px;
-      background-color: var(--card-background);
-
-      img {
-       width: 25px;
-       height: 25px;
-       margin-right: 5px;
-      }
-      
-      p {
-       font-weight: bold;
-      }
-     }
-    </style>
-   </div>
-   
-   <style>
-    .cardsa {
-     width: 100%;
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     flex-direction: column;
-     margin: 20px 0;
-
-     .card {
-      border: solid 2px indianred;
-
-      p {
-       color: red;
-      }
-     }
-    }
-   </style>
-   
-  </section>
-  
-  <style>
-   .fade-in-section {
-    padding: 35px;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h2 {
-     font-size: clamp(2rem, 3vw, 4rem);
-    }
-    
-    .subtitle {
-     color: var(--accent-color);
-     text-align: center;
-     font-family: "Smooch", fantasy;
-    }
-    
-    p.text {
-     max-width: 500px;
-    }
-   }
-  </style>
-  
-  
-  <section class="fade-in-section">
-   <p class="subtitle">The dream</p>
-   <h2>Got filtered data with just on line</h2>
-   <p class="text">
-    SimpliSearch provide you the dream, that mean it allows you to search, sort and filter your data with just on line of code
-   </p>
-   <div class="cardsb">
-    <div class="card">
-     <img src="assets/green-check.svg" alt="icon" />
-     <p>Save time and energy</p>
-    </div>
-    
-    <style>
-     .card {
-      width: 90%;
-      height: 37px;
-      max-width: 420px;
-      border-radius: var(--sm-radius);
-      display: flex;
-      align-items: center;
-      padding: 3px 5px;
-      background-color: var(--card-background);
-
-      img {
-       width: 25px;
-       height: 25px;
-       margin-right: 5px;
-      }
-      
-      p {
-       font-weight: bold;
-      }
-     }
-    </style>
-    
-    <div class="card">
-     <img src="assets/green-check.svg" alt="icon" />
-     <p>Customize to your needs</p>
-    </div>
-    
-    <style>
-     .card {
-      width: 90%;
-      height: 37px;
-      max-width: 420px;
-      border-radius: var(--sm-radius);
-      display: flex;
-      align-items: center;
-      padding: 3px 5px;
-      background-color: var(--card-background);
-
-      img {
-       width: 25px;
-       height: 25px;
-       margin-right: 5px;
-      }
-      
-      p {
-       font-weight: bold;
-      }
-     }
-    </style>
-    
-    <div class="card">
-     <img src="assets/green-check.svg" alt="icon" />
-     <p>A codebase less overloaded</p>
-    </div>
-    
-    <style>
-     .card {
-      width: 90%;
-      height: 37px;
-      max-width: 420px;
-      border-radius: var(--sm-radius);
-      display: flex;
-      align-items: center;
-      padding: 3px 5px;
-      background-color: var(--card-background);
-
-      img {
-       width: 25px;
-       height: 25px;
-       margin-right: 5px;
-      }
-      
-      p {
-       font-weight: bold;
-      }
-     }
-    </style>
-   </div>
-   
-   <style>
-    .cardsb {
-     width: 100%;
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     flex-direction: column;
-     margin: 20px 0;
-
-     .card {
-      border: solid 2px oklch(69.6% 0.17 162.48);
-
-      p {
-       color: green;
-      }
-     }
-    }
-   </style>
-   
-  </section>
-  
-  <style>
-   .fade-in-section {
-    padding: 35px;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h2 {
-     font-size: clamp(2rem, 3vw, 4rem);
-    }
-    
-    .subtitle {
-     color: var(--accent-color);
-     text-align: center;
-     font-family: "Smooch", fantasy;
-    }
-    
-    p.text {
-     max-width: 500px;
-    }
-   }
-  </style>
-  
-  
-  <section class="fade-in-section">
-   <p class="subtitle">What do we provide</p>
-   <h2>+20 options are avaliable for better results in every case</h2>
-   <p class="text">
-    SimpliSearch provide to you several options like formating, conditions, tolerance and so on. They are here to ensure that every need in every situation can be solve easily and efficiently.
-   </p>
-   <br><br>
-   <pre>
-<code class="hljs shadow js shadow">const todos = [...]
+ }
+ nav{
+  gap: 10px;
+  padding:0 5px;
+  a:not(.cta){
+  font-size: 12px;
+  &:hover{
+  border-bottom: 2px solid var(--accent-color);
+  }
+  }
+ }
  
+ border-radius: var(--lg-radius);
+ padding: 10px ;
+ width: 90%;
+ max-width: 500px;
+ border: solid 1px gray;
+ position: fixed;
+ top: 2%;
+ left: 50%;
+ translate: -50%;
+ }
+</style>
+<main>
+ <header>
+ <h1>Build smarter search systems. <br> <b>With less code</b></h1>
+ <p>
+  Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
+ </p>
+ <a href="/pages/login">
+  <button class="btn-xyzx shadow">Start now</button>
+
+<style>
+ .btn-xyzx{
+ padding: 20px 30px;
+ border: solid 2px #00C896;
+ color: white;
+ background: var(--accent-color);
+ margin: 3px;
+ border-radius: var(--lg-radius);
+ font-family: "Montserrat";
+ font-weight: 600;
+ &:hover{
+  background: var(--hover-accent-color);
+  scale: 0.9; 
+ }
+ }
+</style>
+
+ </a>
+ 
+ <div class="circles">
+  <div class="circle">
+<div>
+ <p class="big">+Hours</p>
+ <p class="small">saved</p>
+ </div>
+</div>
+
+<style>
+ .circle{
+ border: solid 6px var(--accent-color);
+ width: 140px;
+ height: 130px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: var(--card-background);
+ 
+ flex-direction: column;
+ .big{
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  color: var(--accent-color);
+ }
+ }
+</style>
+
+  <div class="circle">
+<div>
+ <p class="big">5Kb</p>
+ <p class="small">only</p>
+ </div>
+</div>
+
+<style>
+ .circle{
+ border: solid 6px var(--accent-color);
+ width: 140px;
+ height: 130px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: var(--card-background);
+ 
+ flex-direction: column;
+ .big{
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  color: var(--accent-color);
+ }
+ }
+</style>
+
+  <div class="circle">
+<div>
+ <p class="big">Flexible</p>
+ <p class="small">20+ filtering methods</p>
+ </div>
+</div>
+
+<style>
+ .circle{
+ border: solid 6px var(--accent-color);
+ width: 140px;
+ height: 130px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: var(--card-background);
+ 
+ flex-direction: column;
+ .big{
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  color: var(--accent-color);
+ }
+ }
+</style>
+
+  <div class="circle">
+<div>
+ <p class="big">Smart</p>
+ <p class="small">built-in synonim support</p>
+ </div>
+</div>
+
+<style>
+ .circle{
+ border: solid 6px var(--accent-color);
+ width: 140px;
+ height: 130px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: var(--card-background);
+ 
+ flex-direction: column;
+ .big{
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  color: var(--accent-color);
+ }
+ }
+</style>
+
+ </div>
+</header>
+
+<style>
+ @keyframes fadeInDown {
+ from {
+  opacity: 0;
+  transform: translateY(-20px);
+ }
+ to {
+  opacity: 1;
+  transform: translateY(0);
+ }
+ }
+
+ header {
+ padding: 10px 0 100px 0;
+ margin-bottom: 50px;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ height: 100vh;
+ animation: fadeInDown 1s ease-out forwards;
+
+ h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out 0.2s forwards;
+  opacity: 0;
+ }
+ 
+ p {
+  max-width: 450px;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease-out 0.4s forwards;
+  opacity: 0;
+ }
+ 
+ button {
+  margin: 40px 0;
+  animation: fadeInDown 1s ease-out 0.6s forwards;
+  opacity: 0;
+ }
+
+ .circles {
+  animation: fadeInDown 1s ease-out 0.8s forwards;
+  opacity: 0;
+ }
+ }
+</style>
+
+ 
+ <br/> <br/>
+<section class="fade-in-section">
+ <p class="subtitle">The problem</p>
+ <h2>Too much time and code to build a filtering algorithm?</h2>
+ <p class="text">
+ Creating a great filtering algorithm can be hard. Even when you succeed, you'll still spend several hours or even days finishing it. This approach comes with many inconveniences, such as...
+ </p>
+ <div class="cardsa">
+ <div class="card">
+ <img src="assets/red-cross.svg" alt="icon" />
+ <p>Hours spent filtering data</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ background-color: var(--card-background);
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+
+ <div class="card">
+ <img src="assets/red-cross.svg" alt="icon" />
+ <p>Unreliable algorithms</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ background-color: var(--card-background);
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+
+ <div class="card">
+ <img src="assets/red-cross.svg" alt="icon" />
+ <p>Rewriting logic for every use case</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ background-color: var(--card-background);
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+</div>
+
+<style>
+ .cardsa{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin: 20px 0;
+  .card{
+  border: solid 2px indianred;
+  p{
+  color: red;
+  }
+  }
+ }
+</style>
+
+</section>
+
+<style>
+ .fade-in-section{
+ padding: 35px;
+ margin: 60px 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ h2{
+  font-size: clamp(2rem, 3vw, 4rem);
+ }
+ .subtitle{
+  color: var(--accent-color);
+  text-align: center;
+  font-family: "Smooch", fantasy;
+ }
+ p.text{
+  max-width: 500px;
+ }
+ }
+</style>
+
+
+<section class="fade-in-section">
+ <p class="subtitle">The dream</p>
+ <h2>Get filtered data with just one line</h2>
+ <p class="text">
+ SimpliSearch brings your dream to life. It allows you to search, sort, and filter your data with just one line of code.
+ </p>
+ <div class="cardsb">
+ <div class="card">
+ <img src="assets/green-check.svg" alt="icon" />
+ <p>Save time and energy</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ background-color: var(--card-background);
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+
+ <div class="card">
+ <img src="assets/green-check.svg" alt="icon" />
+ <p>Customize to your needs</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ background-color: var(--card-background);
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+
+ <div class="card">
+ <img src="assets/green-check.svg" alt="icon" />
+ <p>Cleaner, lighter codebase</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ background-color: var(--card-background);
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+</div>
+
+<style>
+ .cardsb{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin: 20px 0;
+  .card{
+  border: solid 2px oklch(69.6% 0.17 162.48);
+  p{
+  color: green;
+  }
+  }
+ }
+</style>
+
+</section>
+
+<style>
+ .fade-in-section{
+ padding: 35px;
+ margin: 60px 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ h2{
+  font-size: clamp(2rem, 3vw, 4rem);
+ }
+ .subtitle{
+  color: var(--accent-color);
+  text-align: center;
+  font-family: "Smooch", fantasy;
+ }
+ p.text{
+  max-width: 500px;
+ }
+ }
+</style>
+
+
+<section class="fade-in-section">
+ <p class="subtitle">What we provide</p>
+ <h2>20+ options to get better results in every case</h2>
+ <p class="text">
+ SimpliSearch gives you many options like formatting, conditions, tolerance, and more. They’re here to make sure every need, in every situation, is solved easily and efficiently.
+ </p>
+ <br><br>
+ <pre>
+<code class="hljs shadow js shadow">const todos = [...]
+
  const searchCompletedTodos = () => {
  const results = search({ 
   query: text, 
   list: todos,
-  targets: [{key: "title", weight: 1 /* default */}, {key: "description", weight: 0.5}],
-  when: (todo) => todo.completed == true,
+  targets: [{key: "title", weight: 1}, {key: "description", weight: 0.5}],
+  when: (todo) => todo.completed === true,
   maxResults: 5
   ...
  })
  }</code>
 </pre>
-   
-   <style>
-    pre {
-     width: 100%;
-     display: flex;
-     justify-content: center;
 
-     code {
-      border: solid 2px var(--accent-color);
-      border-radius: var(--md-radius);
-      padding: 35px;
-      width: 100%;
-      max-width: 500px;
-      box-sizing: border-box;
-     }
-    }
-   </style>
-  </section>
-  
-  <style>
-   .fade-in-section {
-    padding: 35px;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+<style>
+ pre{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  code{
+  border: solid 2px var(--accent-color);
+  border-radius: var(--md-radius);
+  padding: 35px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+ }
+ }
+</style>
+</section>
 
-    h2 {
-     font-size: clamp(2rem, 3vw, 4rem);
-    }
-    
-    .subtitle {
-     color: var(--accent-color);
-     text-align: center;
-     font-family: "Smooch", fantasy;
-    }
-    
-    p.text {
-     max-width: 500px;
-    }
+<style>
+ .fade-in-section{
+ padding: 35px;
+ margin: 60px 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ h2{
+  font-size: clamp(2rem, 3vw, 4rem);
+ }
+ .subtitle{
+  color: var(--accent-color);
+  text-align: center;
+  font-family: "Smooch", fantasy;
+ }
+ p.text{
+  max-width: 500px;
+ }
+ }
+</style>
+
+
+<section class="fade-in-section">
+ <p class="subtitle">Pricing</p>
+ <h2>Invest in better Developer and User Experience</h2>
+ <p>
+ With this simple and easy step, you’ll never be afraid of building a search system again!
+ </p>
+ <div class="pricing-card">
+ <h3><b>$39.99</b><br> for all your live</h3>
+ <ul>
+  <li>Unlimited search requests</li>
+ <li>All methods included</li>
+ <li>Plug-and-play integration</li>
+ <li>Frequent updates</li>
+ <li>Fast and reliable</li>
+ <li>In short, all features included</li>
+ </ul>
+ <br>
+ <div class="center">
+ <a href="pages/login">
+ <button class="btn-xyzpricing center gap-1">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-2">
+ <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+</svg></button>
+
+<style>
+ .btn-xyzpricing{
+ padding: 15px 12px;
+ border: solid 2px $border;
+ color: white;
+ background: var(--accent-color);
+ margin: 3px;
+ border-radius: var(--lg-radius);
+ font-family: "Montserrat";
+ font-weight: 600;
+ &:hover{
+  background: var(--hover-accent-color);
+  scale: 0.9; 
+ }
+ }
+</style>
+
+ </a>
+ </div>
+</div>
+
+<style>
+ .pricing-card{
+ width: 250px;
+ height: 300px;
+ border-radius: var(--lg-radius);
+ border: solid 3px var(--heading-color);
+ margin: 25px 0;
+ padding: 15px;
+ background: var(--card-background);
+ b{
+  font-size:xx-large;
+ }
+ ul{
+  margin-top: 10px; 
+  li{
+   color: var(--accent-color);
+   font-family: "Montserrat", inter;
+   font-size: 15px;
+   font-weight: 700;
+   padding: 3px 0;
+   &::before{
+    content: "-";
+    padding-right: 4px;
    }
-  </style>
-  
-  
-  <section class="fade-in-section">
-   <p class="subtitle">Pricing</p>
-   <h2>Invest for better Developer and User Experience</h2>
-   <p>From this simple and easy action you won't got scared to make search systeme for all your life !</p>
-   <div class="pricing-card">
-    <h3><b>$39.99</b><br> for all your live</h3>
-    <ul>
-     <li>Unlimited search request</li>
-     <li>All methods available</li>
-     <li>Plug and play integration</li>
-     <li>Frequently update</li>
-     <li>Fast and reliable</li>
-     <li>for short, all features</li>
-    </ul>
-    <br>
-    <div class="center">
-     <a href="pages/login">
-      <button class="btn-xyzpricing center gap-1">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-       </svg></button>
-      
-      <style>
-       .btn-xyzpricing {
-        padding: 15px 12px;
-        border: solid 2px $border;
-        color: white;
-        background: var(--accent-color);
-        margin: 3px;
-        border-radius: var(--lg-radius);
-        font-family: "Montserrat";
-        font-weight: 600;
+  }
+ }
+ }
+</style>
+</section>
 
-        &:hover {
-         background: var(--hover-accent-color);
-         scale: 0.9;
-        }
-       }
-      </style>
-      
-     </a>
-    </div>
-   </div>
-   
-   <style>
-    .pricing-card {
-     width: 250px;
-     height: 300px;
-     border-radius: var(--lg-radius);
-     border: solid 3px var(--heading-color);
-     margin: 25px 0;
-     padding: 15px;
-     background: var(--card-background);
+<style>
+ .fade-in-section{
+ padding: 35px;
+ margin: 60px 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ h2{
+  font-size: clamp(2rem, 3vw, 4rem);
+ }
+ .subtitle{
+  color: var(--accent-color);
+  text-align: center;
+  font-family: "Smooch", fantasy;
+ }
+ p.text{
+  max-width: 500px;
+ }
+ }
+</style>
 
-     b {
-      font-size: xx-large;
-     }
-     
-     ul {
-      margin-top: 10px;
 
-      li {
-       color: var(--accent-color);
-       font-family: "Montserrat", inter;
-       font-size: 15px;
-       font-weight: 700;
-       padding: 3px 0;
+<section class="fade-in-section">
+ <p class="subtitle">Conclusion</p>
+ <h2>Make your life easier</h2>
+ <p class="text">
+ With SimpliSearch, you can build a search system in just one line of code. Save time and energy for your other projects. Never fear building a search system again!
+ </p>
+ <br>
+ <a href="pages/login"><button class="btn-xyzd $class">Join the dream!</button>
 
-       &::before {
-        content: "-";
-        padding-right: 4px;
-       }
-      }
-     }
-    }
-   </style>
-  </section>
-  
-  <style>
-   .fade-in-section {
-    padding: 35px;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+<style>
+ .btn-xyzd{
+ padding: 14px;
+ border: solid 2px $border;
+ color: white;
+ background: var(--accent-color);
+ margin: 3px;
+ border-radius: var(--lg-radius);
+ font-family: "Montserrat";
+ font-weight: 600;
+ &:hover{
+  background: var(--hover-accent-color);
+  scale: 0.9; 
+ }
+ }
+</style>
+</a>
+</section>
 
-    h2 {
-     font-size: clamp(2rem, 3vw, 4rem);
-    }
-    
-    .subtitle {
-     color: var(--accent-color);
-     text-align: center;
-     font-family: "Smooch", fantasy;
-    }
-    
-    p.text {
-     max-width: 500px;
-    }
-   }
-  </style>
-  
-  
-  <section class="fade-in-section">
-   <p class="subtitle">Conclusion</p>
-   <h2>Make your life easier</h2>
-   <p class="text">With SimpliSearch you can make a search systeme in just one line of code. You can save time and energy for other project. You will not be scared to make a search systeme for all your life !</p>
-   <br>
-   <a href="pages/login"><button class="btn-xyzd $class">Join the dream !</button>
-    
-    <style>
-     .btn-xyzd {
-      padding: 14px;
-      border: solid 2px $border;
-      color: white;
-      background: var(--accent-color);
-      margin: 3px;
-      border-radius: var(--lg-radius);
-      font-family: "Montserrat";
-      font-weight: 600;
+<style>
+ .fade-in-section{
+ padding: 35px;
+ margin: 60px 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ h2{
+  font-size: clamp(2rem, 3vw, 4rem);
+ }
+ .subtitle{
+  color: var(--accent-color);
+  text-align: center;
+  font-family: "Smooch", fantasy;
+ }
+ p.text{
+  max-width: 500px;
+ }
+ }
+</style>
 
-      &:hover {
-       background: var(--hover-accent-color);
-       scale: 0.9;
-      }
-     }
-    </style>
-   </a>
-  </section>
-  
-  <style>
-   .fade-in-section {
-    padding: 35px;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+</main>
 
-    h2 {
-     font-size: clamp(2rem, 3vw, 4rem);
-    }
-    
-    .subtitle {
-     color: var(--accent-color);
-     text-align: center;
-     font-family: "Smooch", fantasy;
-    }
-    
-    p.text {
-     max-width: 500px;
-    }
-   }
-  </style>
-  
- </main>
- 
- <footer style="
+<footer style="
  background-color: white;
  border-top: 1px solid #ddd;
  padding: 40px 20px;
@@ -805,21 +759,21 @@
  text-align: center;
  gap: 20px;
 ">
-  <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--heading-color);">
-   SimpliSearch
-  </div>
-  
-  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-   <a href="pages/guide" style="color: var(--light-text-color); font-size: 14px;">Guide</a>
-   <a href="pages/login" style="color: var(--light-text-color); font-size: 14px;">Login</a>
-   <a href="/feedback" style="color: var(--light-text-color); font-size: 14px;">Feedback</a>
-   <a href="/legal" style="color: var(--light-text-color); font-size: 14px;">legal</a>
-  </div>
-  
-  <div style="font-size: 13px; color: var(--light-text-color);">
-   &copy; 2025 SimpliSearch.
-  </div>
- </footer>
+ <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--heading-color);">
+ SimpliSearch
+ </div>
+
+ <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+ <a href="pages/guide" style="color: var(--light-text-color); font-size: 14px;">Guide</a>
+ <a href="pages/login" style="color: var(--light-text-color); font-size: 14px;">Login</a>
+ <a href="/feedback" style="color: var(--light-text-color); font-size: 14px;">Feedback</a>
+ <a href="/legal" style="color: var(--light-text-color); font-size: 14px;">legal</a>
+ </div>
+
+ <div style="font-size: 13px; color: var(--light-text-color);">
+ &copy; 2025 SimpliSearch.
+ </div>
+</footer>
  
  
  
