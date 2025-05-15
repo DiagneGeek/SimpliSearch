@@ -1,4 +1,4 @@
-<import name="RightArrow" from="./components/RightArrow.comp" />
+<import name="RightArrow" from="@components/RightArrow.comp" />
 
 <div class="pricing-card">
     <h3><b>$price</b><br> for all your live</h3>
@@ -7,7 +7,7 @@
     </ul>
     <br>
     <div class="center">
-    <a>
+    <a href="pages/login">
     <Btn padding="15px 12px" id="pricing" class="center gap-1">
       So cheap <RightArrow color="white"/>
      </Btn>

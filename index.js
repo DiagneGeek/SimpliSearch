@@ -1,9 +1,9 @@
-const compenize = async (url) => {
-  const files = await fetchFiles(url, 'index')
+const compenize = async (url, pathLayout = {from: ""},displayBtn) => {
+  const files = await fetchFiles(url, 'index', pathLayout)
   const root = document.querySelector('#app')
-  const output = unit(files[0].content, files)
-  
-  root.innerHTML = output.split('  ').join(' ') + copyBtn(output)
+  const output = unit(files[0].content, files).split('  ').join(' ')
+  const toDisplay = `${output} \n ${displayBtn ? copyBtn(output) : ''}`
+  root.innerHTML = toDisplay
   root.querySelectorAll('script').forEach(s => {
     const text = s.text.trim()
     const type = s.type
@@ -15,10 +15,9 @@ const compenize = async (url) => {
     s.remove()
     root.appendChild(newScript)
   })
-  
 }
 
-const copyBtn = toCopy => `
+const copyBtn = toCopy => (`
   <button id="copy-button"
        style="background: transparent; backdrop-filter:blur(10px); border: 1px solid white; color: #565756; padding: 8px 16px;  position: fixed; bottom: 30px; left: 2%;">
     Copy output
@@ -33,9 +32,11 @@ const copyBtn = toCopy => `
   setTimeout(() => {
         btn.style.display = 'none';
   }, 3000);
-</script>`
+  </script>
+  <br>
+`)
 
-const fetchFiles = async (url, name) => {
+const fetchFiles = async (url, name, pathLayout) => {
   let files = []
   const filename = url.slice(url.lastIndexOf('/') + 1)
   if (!filename.endsWith('.comp')) return []
@@ -53,7 +54,6 @@ const fetchFiles = async (url, name) => {
   
   if (imports) {
     // Obtenir le chemin du répertoire de l'URL actuelle
-    const baseUrl = url.substring(0, url.lastIndexOf('/') + 1);
     
     for (let i of imports) {
       content = content.replace(i, '')
@@ -64,8 +64,11 @@ const fetchFiles = async (url, name) => {
           return x.slice(x.indexOf('"') + 1, x.lastIndexOf('"')).trim()
         })
       let absolutePath = importPath
+      if (pathLayout.from.trim()) {
+      absolutePath = absolutePath.replace(`@${pathLayout.from}`, pathLayout.to)
+    }
       
-      files = files.concat(...(await fetchFiles(absolutePath, importName)));
+      files = files.concat(...(await fetchFiles(absolutePath, importName, pathLayout)));
     }
     files[index].content = content.trim()
   }
@@ -130,4 +133,4 @@ const unit = (html, files) => {
   return html;
 };
 
-export const render = () => compenize('./main.comp')
+export const render = (path, pathLayout, dB = false) => compenize(path, pathLayout, dB)

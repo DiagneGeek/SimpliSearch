@@ -1,5 +1,5 @@
-<import name="Btn" from="./components/Button.comp" />
-<import name="Logo" from="./components/Logo.comp" />
+<import name="Btn" from="@components/Button.comp" />
+<import name="Logo" from="@components/Logo.comp" />
 
 <div class="nav-bar">
   <div class="logo">

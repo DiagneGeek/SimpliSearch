@@ -1,0 +1,16 @@
+<import name="Btn" from="@components/Button.comp" />
+
+<form class="$class">
+   <h2 style="font-size: 16px; color: var(--accent-color);">$message</h2>
+  <input type="email" placeholder="email" class="text"/>
+    <p class="emailMess" style="color: red; text-align: center"></p>
+    <br>
+  <input type="password" placeholder="password" class="text"/>
+    <p class="passwordMess" style="color: red; text-align: center"></p>
+    <br>
+  <br>
+  <Btn padding="20px 25px" id="$type">$type</Btn>
+  <br>
+  $children
+</form>
+

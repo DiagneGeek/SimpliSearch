@@ -1,0 +1,47 @@
+<import name="NavBar" from="@components/NavBar.comp" />
+<import name="Btn" from="@components/Button.comp" />
+<import name="Form" from="./Form.comp" />
+
+<NavBar></NavBar>
+
+<main class="login">
+  <h1>It's time to <b>Get</b> the dream</h1>
+   <Form type="signIn" class="sign-in" message="Welcome back!">
+     <p>Don't have account? <button><b>sign up</b></button></p>
+   </Form>
+</main>
+
+<script>
+const select = (s,t) => (t || document).querySelector(s)
+const selectAll = (s,t) => (t || document).querySelectorAll(s)
+
+const emailMess = select(".login .emailMess")
+const passwordMess = select(".login .passwordMess")
+
+selectAll(".login form").forEach(form => {
+  const emailInput = select("input[type='email']", form)
+  const passwordInput = select("input[type='password']", form)
+  
+  emailInput.addEventListener("input", e => {
+     const isValid = e.target.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
+     if(isValid == null) {
+       emailMess.innerText = "Email not valid"
+       emailMess.style.color = "red"
+     }
+     else{
+       emailMess.innerText = "👍 Your email is valid"
+       emailMess.style.color = "green"
+     }
+  })
+  
+  passwordInput.addEventListener("input", e => {
+     if(e.target.value.length > 5){
+       passwordMess.innerText = "🤫 your password is secure"
+       passwordMess.style.color = "green"
+     }else {
+       passwordMess.innerText = "password.length must be >= 6"
+       passwordMess.style.color = "red"
+     }
+  })
+})
+</script>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title></title>
+</head>
+
+<body>
+<div class="nav-bar">
+<div class="logo">
+<img src="/assets/logo.png" alt="logo" class="logoIcon" />
+
+<style>
+.logoIcon{
+width: 28px;
+height: 28px;
+}
+</style>
+
+<p>simplisearch</p>
+</div>
+
+</div>
+
+<style>
+.nav-bar {
+&, .logo,
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+z-index: 99;
+background: rgba(0, 50, 0, 0.05);
+backdrop-filter: blur(30px);
+
+.logo{
+width: 100px;
+p{
+font-weight: bold;
+}
+}
+nav{
+gap: 10px;
+padding:0 5px;
+a:not(.cta){
+font-size: 12px;
+&:hover{
+border-bottom: 2px solid var(--accent-color);
+}
+}
+}
+
+border-radius: var(--lg-radius);
+padding: 10px ;
+width: 90%;
+max-width: 500px;
+border: solid 1px gray;
+position: fixed;
+top: 2%;
+left: 50%;
+translate: -50%;
+}
+</style>
+
+
+<main class="login">
+
+</main>
+
+<script>
+
+</script>
+<button id="copy-button"
+style="background: transparent; backdrop-filter:blur(10px); border: 1px solid white; color: #565756; padding: 8px 16px; position: fixed; bottom: 30px; left: 2%;">
+Copy output
+</button>
+
+<script>
+const btn = document.querySelector('#copy-button');
+btn.addEventListener('click', () => {
+navigator.clipboard.writeText(`<div class="nav-bar">
+<div class="logo">
+<img src="/assets/logo.png" alt="logo" class="logoIcon" />
+
+<style>
+.logoIcon{
+width: 28px;
+height: 28px;
+}
+</style>
+
+<p>simplisearch</p>
+</div>
+
+</div>
+
+<style>
+.nav-bar {
+&, .logo,
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+z-index: 99;
+background: rgba(0, 50, 0, 0.05);
+backdrop-filter: blur(30px);
+
+.logo{
+width: 100px;
+p{
+font-weight: bold;
+}
+}
+nav{
+gap: 10px;
+padding:0 5px;
+a:not(.cta){
+font-size: 12px;
+&:hover{
+border-bottom: 2px solid var(--accent-color);
+}
+}
+}
+
+border-radius: var(--lg-radius);
+padding: 10px ;
+width: 90%;
+max-width: 500px;
+border: solid 1px gray;
+position: fixed;
+top: 2%;
+left: 50%;
+translate: -50%;
+}
+</style>
+
+
+<main class="login">
+
+</main>
+
+<script>
+
+</script>`)
+});
+
+setTimeout(() => {
+btn.style.display = 'none';
+}, 3000);
+</script>
+</body>
+</html>

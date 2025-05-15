@@ -1,9 +1,9 @@
-<import name="Section" from="./components/Section.comp" />
-<import name="Cards" from="./components/Cards.comp" />
-<import name="Card" from="./components/Card.comp" />
-<import name="Btn" from="./components/Button.comp" />
-<import name="PricingCard" from="./components/PricingCard.comp" />
-<import name="Code" from="./components/Code.comp" />
+<import name="Section" from="@components/Section.comp" />
+<import name="Cards" from="@components/Cards.comp" />
+<import name="Card" from="@components/Card.comp" />
+<import name="Btn" from="@components/Button.comp" />
+<import name="PricingCard" from="@components/PricingCard.comp" />
+<import name="Code" from="@components/Code.comp" />
 
 
 <br/> <br/>
@@ -45,7 +45,7 @@
     const results = search({ 
       query: text, 
       list: todos,
-      targets: [{keyName: "title", weight: 0.8}, {keyName: "description", weight: 0.5}],
+      targets: [{key: "title", weight: 1 /* default */}, {key: "description", weight: 0.5}],
       when: (todo) => todo.completed == true,
       maxResults: 5
       ...
@@ -73,6 +73,6 @@
   <h2>Make your life easier</h2>
   <p class="text">With SimpliSearch you can make a search systeme in just one line of code. You can save time and energy for other project. You will not be scared to make a search systeme for all your life !</p>
    <br>
-  <Btn padding="14px" id="d">Join the dream !</Btn>
+  <a href="pages/login"><Btn padding="14px" id="d">Join the dream !</Btn></a>
 </Section>
 

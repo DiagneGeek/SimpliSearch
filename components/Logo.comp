@@ -1,4 +1,4 @@
-<img src="assets/logo.png" alt="logo" class="logoIcon" />
+<img src="/assets/logo.png" alt="logo" class="logoIcon" />
 
 <style>
   .logoIcon{

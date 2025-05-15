@@ -15,7 +15,7 @@
   }
 
   header {
-    padding: 100px 0 100px 0;
+    padding: 10px 0 100px 0;
     margin-bottom: 50px;
     box-sizing: border-box;
     display: flex;

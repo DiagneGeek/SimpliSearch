@@ -1,0 +1,20 @@
+<import name="NavBar" from="@components/NavBar.comp" />
+
+<NavBar>
+  <nav>
+    <a href="">Exemples</a>
+    <a href="pages/guide">Guide</a>
+    <a href="pages/login" class="cta">
+      <Btn padding="10px" id="z">Let's go</Btn>
+    </a>
+  </nav>
+</NavBar>
+
+
+<main style="height: 100svh">
+  <header><h1>The <b>Official</b> guide of SimpliSearch</h1></header>
+  
+  <section>
+     
+  </section>
+</main>
