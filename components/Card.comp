@@ -12,7 +12,6 @@
     display: flex;
     align-items: center;
     padding: 3px 5px;
-    background-color: var(--card-background);
     img{
      width: 25px;
      height: 25px;

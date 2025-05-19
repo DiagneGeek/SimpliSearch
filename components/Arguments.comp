@@ -40,7 +40,7 @@
     SimpliSearch gives you many options like formatting, conditions, tolerance, and more. They’re here to make sure every need, in every situation, is solved easily and efficiently.
   </p>
   <br><br>
-  <Code class="hljs shadow js shadow">
+  <Code class="hljs shadow js">
   const todos = [...]
 
   const searchCompletedTodos = () => {

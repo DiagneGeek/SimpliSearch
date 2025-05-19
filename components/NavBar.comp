@@ -25,6 +25,7 @@
       width: 100px;
       p{
         font-weight: bold;
+        font-family: "Ubuntu", inter;
       }
     }
     nav{
@@ -32,6 +33,7 @@
       padding:0 5px;
       a:not(.cta){
        font-size: 12px;
+       font-family: "Ubuntu", sans-serif;
        &:hover{
         border-bottom: 2px solid var(--accent-color);
        }

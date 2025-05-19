@@ -14,6 +14,8 @@
 </head>
 
 <body>
+ <!-- _____________________________ -->
+ 
 <div class="nav-bar">
  <div class="logo">
  <img src="/assets/logo.png" alt="logo" class="logoIcon" />
@@ -70,6 +72,7 @@
   width: 100px;
   p{
   font-weight: bold;
+  font-family: "Ubuntu", inter;
   }
  }
  nav{
@@ -77,6 +80,7 @@
   padding:0 5px;
   a:not(.cta){
   font-size: 12px;
+  font-family: "Ubuntu", sans-serif;
   &:hover{
   border-bottom: 2px solid var(--accent-color);
   }
@@ -96,9 +100,9 @@
 </style>
 <main>
  <header>
- <h1>Build smarter search systems. <br> <b>With less code</b></h1>
+ <h1>Smarter search systems. <br><b>Built in minutes.</b></h1>
  <p>
-  Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
+  SimpliSearch helps you build ultra-fast, intelligent filters in seconds — with a lightweight algorithm that saves time and keeps your code clean.
  </p>
  <a href="/pages/login">
   <button class="btn-xyzx shadow">Start now</button>
@@ -257,7 +261,7 @@
  animation: fadeInDown 1s ease-out forwards;
 
  h1 {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(2.1rem, 5vw, 5rem);
   margin-bottom: 20px;
   animation: fadeInDown 1s ease-out 0.2s forwards;
   opacity: 0;
@@ -307,7 +311,6 @@
  display: flex;
  align-items: center;
  padding: 3px 5px;
- background-color: var(--card-background);
  img{
   width: 25px;
   height: 25px;
@@ -318,7 +321,6 @@
  }
  }
 </style>
-
  <div class="card">
  <img src="assets/red-cross.svg" alt="icon" />
  <p>Unreliable algorithms</p>
@@ -333,7 +335,6 @@
  display: flex;
  align-items: center;
  padding: 3px 5px;
- background-color: var(--card-background);
  img{
   width: 25px;
   height: 25px;
@@ -344,7 +345,6 @@
  }
  }
 </style>
-
  <div class="card">
  <img src="assets/red-cross.svg" alt="icon" />
  <p>Rewriting logic for every use case</p>
@@ -359,7 +359,6 @@
  display: flex;
  align-items: center;
  padding: 3px 5px;
- background-color: var(--card-background);
  img{
   width: 25px;
   height: 25px;
@@ -434,7 +433,6 @@
  display: flex;
  align-items: center;
  padding: 3px 5px;
- background-color: var(--card-background);
  img{
   width: 25px;
   height: 25px;
@@ -445,7 +443,6 @@
  }
  }
 </style>
-
  <div class="card">
  <img src="assets/green-check.svg" alt="icon" />
  <p>Customize to your needs</p>
@@ -460,7 +457,6 @@
  display: flex;
  align-items: center;
  padding: 3px 5px;
- background-color: var(--card-background);
  img{
   width: 25px;
   height: 25px;
@@ -471,7 +467,6 @@
  }
  }
 </style>
-
  <div class="card">
  <img src="assets/green-check.svg" alt="icon" />
  <p>Cleaner, lighter codebase</p>
@@ -486,7 +481,6 @@
  display: flex;
  align-items: center;
  padding: 3px 5px;
- background-color: var(--card-background);
  img{
   width: 25px;
   height: 25px;
@@ -620,14 +614,14 @@
  <br>
  <div class="center">
  <a href="pages/login">
- <button class="btn-xyzpricing center gap-1">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-2">
+ <button class="btn-xyzpricing center gap-1 bg-transparent color-primary">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--accent-color)" class="size-2">
  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
 </svg></button>
 
 <style>
  .btn-xyzpricing{
  padding: 15px 12px;
- border: solid 2px $border;
+ border: solid 2px var(--accent-color);
  color: white;
  background: var(--accent-color);
  margin: 3px;
@@ -643,12 +637,13 @@
 
  </a>
  </div>
+
 </div>
 
 <style>
  .pricing-card{
  width: 250px;
- height: 300px;
+ height: 310px;
  border-radius: var(--lg-radius);
  border: solid 3px var(--heading-color);
  margin: 25px 0;
@@ -762,14 +757,14 @@
  <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--heading-color);">
  SimpliSearch
  </div>
-
+ 
  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
  <a href="pages/guide" style="color: var(--light-text-color); font-size: 14px;">Guide</a>
  <a href="pages/login" style="color: var(--light-text-color); font-size: 14px;">Login</a>
  <a href="/feedback" style="color: var(--light-text-color); font-size: 14px;">Feedback</a>
  <a href="/legal" style="color: var(--light-text-color); font-size: 14px;">legal</a>
  </div>
-
+ 
  <div style="font-size: 13px; color: var(--light-text-color);">
  &copy; 2025 SimpliSearch.
  </div>

@@ -10,8 +10,8 @@
     --sm-radius: 10px;
     --md-radius: 16px;
     --lg-radius: 25px;
-    --card-background: rgba(248, 255, 248, 0.2);
-    --hover-accent-color: rgb(100, 200, 160);
+    --card-background: #E8F2EB;
+    --hover-accent-color: #58E3B4;
   }
   
   * {
@@ -105,4 +105,12 @@
   
   .gap-1 {
     gap: 4px;
+  }
+  
+  .color-primary{
+    color: var(--accent-color) !important;
+  }
+  
+  .bg-transparent{
+    background:transparent !important;
   }

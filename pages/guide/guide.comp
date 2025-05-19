@@ -1,4 +1,6 @@
 <import name="NavBar" from="@components/NavBar.comp" />
+<import name="Guide" from="./guideContent.comp" />
+<import name="Code" from="@components/Code.comp" />
 
 <NavBar>
   <nav>
@@ -12,9 +14,46 @@
 
 
 <main style="height: 100svh">
-  <header><h1>The <b>Official</b> guide of SimpliSearch</h1></header>
+  <header>
+    <h1>The <b>Official</b> guide of SimpliSearch</h1>
+  </header>
   
   <section>
-     
+    <Guide>
+      <div class="carousels">
+        <div class="carousel" id="textCarousel">
+          <div class="slides">
+            <div class="slide">Fast filtering of large arrays</div>
+            <div class="slide">Plug and play with just 1 line of code</div>
+            <div class="slide">Flexible: support custom scoring and sorting</div>
+          </div>
+        </div>
+        
+        <!-- Code Carousel -->
+        <div class="carousel ipad" id="codeCarousel">
+          <div class="slides">
+            <div class="slide">
+              <Code class="hljs shadow js">
+                
+              </Code>
+            </div>
+            <div class="slide">
+              <Code class="hljs shadow js">
+                
+              </Code>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <div class="buttons">
+        <button class="nav-btn active" data-index="0">Home</button>
+        <button class="nav-btn" data-index="1">Feature 1</button>
+        <button class="nav-btn" data-index="2">Feature 2</button>
+      </div>
+      </div>
+    </Guide>
   </section>
 </main>

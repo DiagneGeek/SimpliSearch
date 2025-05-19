@@ -1,0 +1,142 @@
+<div class="guide">
+ $children
+</div>
+
+<style>
+ .carousels {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+  perspective: 200px;
+ }
+ 
+ .carousel {
+  width: 90%;
+  height: 250px;
+  max-width: 700px;
+  background: #E8ECE9;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  border: solid 2px var(--accent-color);
+ }
+ 
+ .carousel .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+ }
+ 
+ .carousel .slide {
+  min-width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "Montserrat", inter;
+ }
+ 
+ #textCarousel {
+  padding: 5px;
+  background: var(--card-background);
+
+  .slide {
+   background: #F4FFFA;
+   width: 100%;
+   height: 100%;
+   border-radius: 14px;
+   padding: 0.3rem;
+   border: 1px solid #E7F7F2;
+  }
+ }
+ 
+ .ipad {
+  background: linear-gradient(45deg, black, var(--accent-color), black);
+  height: auto;
+  padding: 8px 4px 4px 4px;
+  border: 8px solid #0E0F0E;
+  box-shadow: inset 0 0 10px #000, 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: monospace;
+  box-sizing: border-box;
+  aspect-ratio: 16/9;
+  pre{
+    height: 100%;
+    font-size: 13px;
+    padding: 0px;
+    code{padding: 0.4rem;}
+  }
+  &::before {
+   content: "";
+   position: absolute;
+   top: -7px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 80px;
+   height: 17px;
+   background: #111;
+   border-radius: 6px;
+   z-index: 10;
+  }
+ }
+ 
+ .buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+ }
+ 
+ .buttons button {
+  padding: 13px;
+  border: solid 2px var(--hover-accent-color);
+  color: white;
+  background: var(--accent-color);
+  margin: 3px;
+  border-radius: var(--lg-radius);
+  font-family: "Montserrat";
+  font-weight: 600;
+
+  &:hover {
+   background: var(--hover-accent-color);
+   scale: 0.9;
+  }
+ }
+ 
+ .buttons .active {
+  background: #1BAE7C;
+  scale: 1.1;
+ }
+</style>
+
+<script>
+ 
+    const textSlides = document.querySelector('#textCarousel .slides');
+    const codeSlides = document.querySelector('#codeCarousel .slides');
+    const buttons = document.querySelectorAll('.nav-btn');
+    const width1 = textSlides.offsetWidth
+    const width2 = codeSlides.offsetWidth
+    
+    
+    function goToSlide(index) {
+     const offset = w => `translateX(-${index * w}px)`;
+     textSlides.style.transform = offset(width1);
+     codeSlides.style.transform = offset(width2);
+     
+     buttons.forEach(btn => btn.classList.remove('active'));
+     buttons[index].classList.add('active');
+    }
+    
+    buttons.forEach(btn => {
+     btn.addEventListener('click', () => {
+      const index = parseInt(btn.dataset.index, 10);
+      goToSlide(index);
+     });
+    });
+  
+</script>

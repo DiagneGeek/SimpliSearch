@@ -15,9 +15,9 @@
 </NavBar>
 <main>
   <Header>
-    <h1>Build smarter search systems. <br> <b>With less code</b></h1>
+    <h1>Smarter search systems. <br><b>Built in minutes.</b></h1>
     <p>
-      Boost your data searches with SimpliSearch — a lightweight, blazing-fast algorithm built to deliver smarter, more efficient filtering
+      SimpliSearch helps you build ultra-fast, intelligent filters in seconds — with a lightweight algorithm that saves time and keeps your code clean.
     </p>
     <a href="/pages/login">
       <Btn padding="20px 30px" id="x" border="#00C896" class="shadow">Start now</Btn>
@@ -48,14 +48,14 @@
   <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--heading-color);">
     SimpliSearch
   </div>
-
+  
   <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
     <a href="pages/guide" style="color: var(--light-text-color); font-size: 14px;">Guide</a>
     <a href="pages/login" style="color: var(--light-text-color); font-size: 14px;">Login</a>
     <a href="/feedback" style="color: var(--light-text-color); font-size: 14px;">Feedback</a>
     <a href="/legal" style="color: var(--light-text-color); font-size: 14px;">legal</a>
   </div>
-
+  
   <div style="font-size: 13px; color: var(--light-text-color);">
     &copy; 2025 SimpliSearch.
   </div>
