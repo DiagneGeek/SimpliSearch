@@ -1,5 +1,5 @@
 <import name="NavBar" from="@components/NavBar.comp" />
-<import name="Guide" from="./guide/guideContent.comp" />
+<import name="Guide" from="./guideContent.comp" />
 <import name="TextSlides" from="./TextSlides.comp" />
 <import name="Code" from="@components/Code.comp" />
 
