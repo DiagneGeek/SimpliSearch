@@ -95,6 +95,7 @@
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 5px 0 20px 0; 
   position: relative;
@@ -131,6 +132,24 @@
   background: var(--accent-color);
   color: antiquewhite;
   scale: 1.1;
+ }
+
+ @media screen and (max-width: 600px) {
+  .carousels {
+   flex-direction: column;
+   align-items: center;
+  }
+  
+  #textCarousel, #codeCarousel {
+   width: 100%;
+   max-width: none;
+   aspect-ratio: unset;
+  }
+  #codeCarousel {
+    aspect-ratio: 16/9;
+  }
+  
+  
  }
 </style>
 
