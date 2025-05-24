@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
      <link rel="stylesheet" href="/global.css" type="text/css" />
-    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
  <title>HHHHHHHHHHHHHHHHHHHH • simplisearch</title>
 </head>
 <body>
