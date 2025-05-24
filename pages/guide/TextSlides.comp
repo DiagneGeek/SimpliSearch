@@ -31,6 +31,5 @@
 <style>
     .slide ul li{
         font-size: 14px;
-        color: var(--text-color)
     }
 </style>
