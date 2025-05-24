@@ -20,9 +20,17 @@
       The <code class="text">search()</code> function can take optionals conditions props.
       These props allow you to specify how the search should be performed. Below is some props you can use:
       <ul>
-        <li><code class="text">minLength</code> : This prop verify if query.length </li>
+        <li><code class="text">minLength</code> : This prop allows you to start searching only when query.length == his value</li>
+        <li><code class="text">maxScore</code> : It allows to add an item as result only if his score (given by our alghorithm) is less than his value (the lower the score, the more relevant it is)</li>
       </ul>
       
     </p>
 </div>
 </div>
+
+<style>
+    .slide ul li{
+        font-size: 14px;
+        color: var(--text-color)
+    }
+</style>

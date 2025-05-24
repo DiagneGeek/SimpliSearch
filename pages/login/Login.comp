@@ -1,6 +1,6 @@
 <import name="NavBar" from="@components/NavBar.comp" />
 <import name="Btn" from="@components/Button.comp" />
-<import name="Form" from="./login/Form.comp" />
+<import name="Form" from="./Form.comp" />
 
 <NavBar></NavBar>
 

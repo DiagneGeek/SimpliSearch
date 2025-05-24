@@ -123,8 +123,7 @@
   font-weight: 600;
 
   &:hover {
-   background: var(--hover-accent-color);
-   scale: 0.9;
+   background: rgb(200, 250, 225);
   }
  }
  

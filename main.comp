@@ -7,7 +7,7 @@
 <NavBar>
   <nav>
     <a href="">Exemples</a>
-    <a href="pages/guide">Guide</a>
+    <a href="pages/guide/index.html">Guide</a>
     <a href="pages/login" class="cta">
       <Btn padding="10px" id="z">Let's go</Btn>
     </a>
