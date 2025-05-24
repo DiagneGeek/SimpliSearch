@@ -1,0 +1,28 @@
+<div class="slides">
+
+<!-- basics -->
+<div class="slide">
+    <h2>Basics</h2>
+    <p>
+      The core of SimpliSearch is <code class="text">search()</code>. This function will return the <b>filtered</b> and <b>sorted</b> results based on the query you provide.
+      It take as param an object. The main props are <code class="text">query</code> and <code class="text">list</code>.
+      <ul>
+        <li>query is the string that will be compared to each item of the array</li>
+        <li>list is the array of items to be filtered and sorted</li>
+      </ul>
+    </p>
+</div>
+
+<!-- conditions -->
+<div class="slide">
+    <h2>Conditions</h2>
+    <p>
+      The <code class="text">search()</code> function can take optionals conditions props.
+      These props allow you to specify how the search should be performed. Below is some props you can use:
+      <ul>
+        <li><code class="text">minLength</code> : This prop verify if query.length </li>
+      </ul>
+      
+    </p>
+</div>
+</div>

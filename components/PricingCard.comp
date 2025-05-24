@@ -24,7 +24,6 @@
     border: solid 3px var(--heading-color);
     margin: 25px 0;
     padding: 15px;
-    background: var(--card-background);
     b{
         font-size:xx-large;
     }

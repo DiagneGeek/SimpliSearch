@@ -3,18 +3,22 @@
 </div>
 
 <style>
+  .guide{
+    width: 100%;
+  }
  .carousels {
   display: flex;
   gap: 2rem;
   align-items: center;
-  flex-direction: column;
-  perspective: 200px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
  }
  
  .carousel {
   width: 90%;
   height: 250px;
-  max-width: 700px;
+  max-width: 600px;
   background: #E8ECE9;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -24,7 +28,9 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  aspect-ratio: 16/9;
   border: solid 2px var(--accent-color);
+  
  }
  
  .carousel .slides {
@@ -90,13 +96,27 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  padding: 5px 0 20px 0; 
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 0.5px;
+    background: gray;
+    border-radius: var(--lg-radius);
+    z-index: -1;
+  }
  }
  
  .buttons button {
   padding: 13px;
   border: solid 2px var(--hover-accent-color);
-  color: white;
-  background: var(--accent-color);
+  color: var(--text-color);
+  background: var(--card-background);
   margin: 3px;
   border-radius: var(--lg-radius);
   font-family: "Montserrat";
@@ -109,7 +129,8 @@
  }
  
  .buttons .active {
-  background: #1BAE7C;
+  background: var(--accent-color);
+  color: antiquewhite;
   scale: 1.1;
  }
 </style>
@@ -132,9 +153,9 @@
      buttons[index].classList.add('active');
     }
     
-    buttons.forEach(btn => {
+    buttons.forEach((btn, index) => {
      btn.addEventListener('click', () => {
-      const index = parseInt(btn.dataset.index, 10);
+       index = parseInt(index, 10);
       goToSlide(index);
      });
     });

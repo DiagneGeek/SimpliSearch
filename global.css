@@ -2,7 +2,7 @@
   
   :root {
     --background-color: #f4f4f4;
-    --text-color: #565756;
+    --text-color: rgb(47, 52, 47);
     --light-text-color: #838A80;
     --accent-color: oklch(69.6% 0.17 162.48);
     --secondary-color: #F87171;
@@ -64,6 +64,21 @@
     width: 100%;
     padding:15px 0;
   }
+
+   ul{
+  margin-top: 10px; 
+  li{
+   color: var(--accent-color);
+   font-family: "Montserrat", inter;
+   font-size: 15px;
+   font-weight: 700;
+   padding: 3px 0;
+   &::before{
+    content: "-";
+    padding-right: 4px;
+   }
+  }
+  }
   
   input.text{
     width: 250px;
@@ -113,4 +128,16 @@
   
   .bg-transparent{
     background:transparent !important;
+  }
+
+  code.text {
+    font-family: "Smooch Sans", monospace;
+    font-size: 14px;
+    color: var(--text-color);
+    background: var(--card-background);
+    padding: 3px 5px;
+    border-radius: var(--sm-radius);
+    color: var(--accent-color);
+    font-weight: 600;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
   }

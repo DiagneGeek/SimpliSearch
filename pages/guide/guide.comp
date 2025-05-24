@@ -1,5 +1,6 @@
 <import name="NavBar" from="@components/NavBar.comp" />
-<import name="Guide" from="./guideContent.comp" />
+<import name="Guide" from="./guide/guideContent.comp" />
+<import name="TextSlides" from="./guide/TextSlides.comp" />
 <import name="Code" from="@components/Code.comp" />
 
 <NavBar>
@@ -18,15 +19,23 @@
     <h1>The <b>Official</b> guide of SimpliSearch</h1>
   </header>
   
-  <section>
+  <section class="guide-section">
     <Guide>
+       <!-- Navigation Buttons -->
+      <div class="buttons">
+        <button class="nav-btn active">Basics</button>
+        <button class="nav-btn">Conditions</button>
+        <button class="nav-btn">Formats</button>
+        <button class="nav-btn" data-index="3">Concat & When</button>
+        <button class="nav-btn" data-index="4">On finish</button>
+        <button class="nav-btn" data-index="5">Targets</button>
+      </div>
+      
       <div class="carousels">
+
+        <!-- Text Carousel -->
         <div class="carousel" id="textCarousel">
-          <div class="slides">
-            <div class="slide">Fast filtering of large arrays</div>
-            <div class="slide">Plug and play with just 1 line of code</div>
-            <div class="slide">Flexible: support custom scoring and sorting</div>
-          </div>
+          <TextSlides />
         </div>
         
         <!-- Code Carousel -->
@@ -46,14 +55,8 @@
         </div>
         
       </div>
-      
-      <!-- Navigation Buttons -->
-      <div class="buttons">
-        <button class="nav-btn active" data-index="0">Home</button>
-        <button class="nav-btn" data-index="1">Feature 1</button>
-        <button class="nav-btn" data-index="2">Feature 2</button>
-      </div>
       </div>
     </Guide>
   </section>
 </main>
+
