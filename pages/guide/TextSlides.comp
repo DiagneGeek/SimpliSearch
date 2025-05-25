@@ -18,7 +18,7 @@
     <h2>Conditions</h2>
     <p>
       The <code class="text">search()</code> function can take optionals conditions props.
-      These props allow you to specify how the search should be performed. Below is some props you can use:
+      These props allow you to specify how the search should be performed. Below is two of them:
       <ul>
         <li><code class="text">minLength</code> : This prop allows you to start searching only when query.length == his value</li>
         <li><code class="text">maxScore</code> : It allows to add an item as result only if his score (given by our alghorithm) is less than his value (the lower the score, the more relevant it is)</li>
@@ -26,10 +26,85 @@
       
     </p>
 </div>
+
+<!-- formats -->
+<div class="slide">
+    <h2>Formats</h2>
+    <p>
+      The <code class="text">search()</code> function can take an optional <code class="text">formatTo</code> prop.
+      This prop allows you to specify the format of the query. It's very useful when you want the input query is writting normally but must be comparing to another format like <b>camelCase</b> or <b>kebab-case</b>
+      bolow is the list of available formats:
+      <ul>
+        <li><code class="text">camelCase</code> : The query is compared to the items in camelCase format</li>
+        <li><code class="text">kebab-case</code> : The query is compared to the items in kebab-case format</li>
+        <li><code class="text">snake_case</code> : The query is compared to the items in snake_case format</li>
+        <li><code class="text">pascalCase</code> : The query is compared to the items in pascalCase format</li>
+      </ul>
+    </p>
+</div>
+
+<!-- concat & when -->
+<div class="slide">
+    <h2>Concat & When</h2>
+    <p>
+      The <code class="text">concat</code> prop allows you to concanate results into a single string or object (that includes arrays).
+      It can be used when you want to concanate the results into html or to mute the final result. <br>
+      <br>
+      The <code class="text">when</code> prop works like <code class="text">.filter()</code>; It add an item into results only if the condition is <code class="text">true</code>.
+    </p>
+</div>
+
+<!-- on finish -->
+<div class="slide">
+    <h2>On finish</h2>
+    <p>
+      The <code class="text">onFinish</code> prop is a function that will be called when the search is finished.
+      it provide an <b>object</b> with the <b>final results, the formatted query, fallback, and the concanate output.</b>
+      It can be used to do something with the results, like displaying them or saving them to a database.
+    </p>
+</div>
+
+<!-- targets -->
+<div class="slide">
+    <h2>Targets</h2>
+    <p>
+      The <code class="text">targets</code> prop allows you to specify the targets of the search.
+      It can be used to search in specific properties of an object or in specific elements of an array.
+      <br>
+      <br>
+      The targets can be an array of string or an array of object. If it's an array of string, each item (string) will represent a prop name. But if you want differents weights, you can use an array of object, each object must have a <code class="text">key</code> and a <code class="text">weight</code> property. (like the weight of title will be more important than the weight of description)
+    </p>
+</div>
+
+<!-- strict mode -->
+<div class="slide">
+    <h2>Strict mode</h2>
+    <p>
+      The <code class="text">strict</code> prop specifies if the search should be strict or not.
+      If it's set to <code class="text">true</code>, the search will only return results that match the query exactly.
+      If it's set to <code class="text">false</code>, the search will return results that partially match the query.
+      <br>
+      <br>
+      It can be used to perform a <b>strict</b> search or a <b>fuzzy</b> search depending on your needs.
+    </p>
+</div>
+
+<!-- maxResult & fallback -->
+<div class="slide">
+    <h2>MaxResult & Fallback</h2>
+    <p>
+      <code class="text">maxResult &lt;Number&gt;</code> allows you to specify the maximum number of results to return.
+      For instance, if its value is <code class="text">5</code>, even if there are ten relevant results, only the five most relevant will be returned.
+      <br>
+      <br>
+      The <code class="text">fallback</code> prop allows you to specify a fallback value if no results are found.
+      It can be used to display a message or return a default value.
+    </p>
+  </div>
 </div>
 
 <style>
-    .slide ul li{
+    .slide ul li {
         font-size: 14px;
     }
 </style>

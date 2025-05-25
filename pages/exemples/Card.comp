@@ -1,0 +1,17 @@
+<import name="Btn" from="@components/Button.comp" />
+
+<div class="use-case-card">
+  <div class="use-case-icon">$icon</div>
+  <h3 class="use-case-title">$title</h3>
+  <p class="use-case-description">
+    $description
+  </p>
+  <ul class="use-case-features">
+    $children
+  </ul>
+  <div class="center">
+    <Btn class="use-case-button" padding="20px" id="use-case-button">
+        Show code
+    </Btn>
+  </div>
+</div>

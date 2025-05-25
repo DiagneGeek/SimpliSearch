@@ -51,7 +51,7 @@
  #textCarousel {
   padding: 5px;
   background: var(--card-background);
-
+  
   .slide {
    background: #F4FFFA;
    width: 100%;
@@ -59,6 +59,7 @@
    border-radius: 14px;
    padding: 0.3rem;
    border: 1px solid #E7F7F2;
+   overflow-y: auto;
   }
  }
  

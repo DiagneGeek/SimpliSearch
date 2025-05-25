@@ -1,0 +1,155 @@
+<import name="NavBar" from="@components/NavBar.comp" />
+<import name="Btn" from="@components/Button.comp" />
+<import name="Header" from="@components/Header.comp" />
+<import name="Card" from="./Card.comp" />
+
+<NavBar>
+  <nav>
+    <a href="/pages/exemples/">Exemples</a>
+    <a href="/pages/guide/">Guide</a>
+    <a href="/pages/login/" class="cta">
+      <Btn padding="10px" id="first-cta">Let's go</Btn>
+    </a>
+  </nav>
+</NavBar>
+
+<main>
+  <div style="height: 50svh;">
+  <Header>
+    <h1>Powerful use cases. <br><b>Real solutions. </b></h1>
+    <p class="text">
+      Discover how SimpliSearch transforms search experiences across different industries and applications. From e-commerce to documentation, see how our lightweight solution delivers results.
+    </p>
+  </Header>
+  </div>
+
+  <section class="use-cases">
+
+    <Card title="Make dashboard more powerful" icon="📊" description="Enhance your dashboard with advanced search capabilities, allowing users to filter and find what they want quickly.">
+      <li>Filter by date, category, and tags</li>
+      <li>Real-time search results</li>
+      <li>Customizable search parameters</li>
+      <li>Supports complex queries</li>
+    </Card>
+
+    <Card title="Content Management" icon="📰" description="Search through articles, blog posts, and media with advanced content filtering capabilities.">
+      <li>Full-text content search</li>
+      <li>Date range filtering</li>
+      <li>Author and category filters</li>
+      <li>Content type sorting</li>
+    </Card>
+
+    <Card title="E-commerce Product Search" icon="🛒" description="Enable customers to find products instantly with intelligent filtering, synonym support, and typo tolerance.">
+       <li>Filter by price, category, brand</li>
+       <li>Smart autocomplete suggestions</li>
+       <li>Handles misspellings gracefully</li>
+       <li>Mobile-optimized interface</li>
+    </Card>
+
+    <Card title="Documentation Search" icon="📚" description="Help users navigate complex documentation with semantic search and contextual results.">
+       <li>Search across multiple docs</li>
+       <li>Highlight relevant sections</li>
+       <li>Tag-based filtering</li>
+       <li>Version-specific results</li>
+    </Card>
+
+    <Card icon="🎵" description="Create searchable music, video, or image libraries with metadata-based filtering." title="Media Libraries">
+        <li>Search by title, artist, genre</li>
+         <li>Duration and size filters</li>
+        <li>Quality and format options</li>
+        <li>Playlist integration</li>
+    </Card>
+
+    <Card title="Team Directory" icon="👥" description="Build searchable employee directories with role-based filtering and contact information.">
+      <li>Search by name, role, department</li>
+      <li>Skills and expertise filtering</li>
+      <li>Location-based results</li>
+      <li>Contact integration</li>
+    </Card>
+
+  </section>
+</main>
+
+
+<style>
+  .use-cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+   .use-case-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: translate .1s ease-in-out, box-shadow 0.3s ease;
+    padding-bottom: 5rem;
+     position: relative;
+  }
+
+  .use-cases .use-case-card .center{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    translate: -50%;
+  }
+
+  .use-case-card:hover {
+    translate: 0 -5px;
+    box-shadow: 2px 12px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .use-case-icon {
+    width: 60px;
+    height: 60px;
+    background: #10b981;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+  }
+
+  .use-case-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    padding: 0;
+    text-align: left;
+  }
+
+  .use-case-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .use-case-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .use-case-features li {
+    color: #10b981;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .use-case-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+</style>

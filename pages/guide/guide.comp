@@ -5,9 +5,9 @@
 
 <NavBar>
   <nav>
-    <a href="">Exemples</a>
-    <a href="pages/guide">Guide</a>
-    <a href="pages/login" class="cta">
+    <a href="/pages/exemples/">Exemples</a>
+    <a href="/pages/guide/">Guide</a>
+    <a href="/pages/login/" class="cta">
       <Btn padding="10px" id="z">Let's go</Btn>
     </a>
   </nav>
@@ -24,11 +24,13 @@
        <!-- Navigation Buttons -->
       <div class="buttons">
         <button class="nav-btn active">Basics</button>
-        <button class="nav-btn">Conditions</button>
+        <button class="nav-btn">minLength & maxScore</button>
         <button class="nav-btn">Formats</button>
-        <button class="nav-btn" data-index="3">Concat & When</button>
-        <button class="nav-btn" data-index="4">On finish</button>
-        <button class="nav-btn" data-index="5">Targets</button>
+        <button class="nav-btn">Concat & When</button>
+        <button class="nav-btn">On finish</button>
+        <button class="nav-btn">Targets</button>
+        <button class="nav-btn">Strict mode</button>
+        <button class="nav-btn">MaxResult & fallback</button>
       </div>
       
       <div class="carousels">
