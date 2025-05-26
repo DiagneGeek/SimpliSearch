@@ -1,6 +1,7 @@
 <import name="NavBar" from="@components/NavBar.comp" />
 <import name="Guide" from="./guideContent.comp" />
 <import name="TextSlides" from="./TextSlides.comp" />
+<import name="CodeSlides" from="./CodeSlides.comp" />
 <import name="Code" from="@components/Code.comp" />
 
 <NavBar>
@@ -26,11 +27,11 @@
         <button class="nav-btn active">Basics</button>
         <button class="nav-btn">minLength & maxScore</button>
         <button class="nav-btn">Formats</button>
+        <button class="nav-btn">MaxResult & fallback</button>
         <button class="nav-btn">Concat & When</button>
         <button class="nav-btn">On finish</button>
         <button class="nav-btn">Targets</button>
         <button class="nav-btn">Strict mode</button>
-        <button class="nav-btn">MaxResult & fallback</button>
       </div>
       
       <div class="carousels">
@@ -43,16 +44,7 @@
         <!-- Code Carousel -->
         <div class="carousel ipad" id="codeCarousel">
           <div class="slides">
-            <div class="slide">
-              <Code class="hljs shadow js">
-                
-              </Code>
-            </div>
-            <div class="slide">
-              <Code class="hljs shadow js">
-                
-              </Code>
-            </div>
+            <CodeSlides />
           </div>
         </div>
         

@@ -1,17 +1,92 @@
-<import name="Btn" from="@components/Button.comp" />
+<import name="Btn" from="@components/Btn.comp" />
 
 <div class="use-case-card">
-  <div class="use-case-icon">$icon</div>
-  <h3 class="use-case-title">$title</h3>
-  <p class="use-case-description">
-    $description
-  </p>
-  <ul class="use-case-features">
-    $children
-  </ul>
-  <div class="center">
-    <Btn class="use-case-button" padding="20px" id="use-case-button">
-        Show code
-    </Btn>
-  </div>
+   <div class="use-case-icon">$icon</div>
+    <h3 class="use-case-title">$title</h3>
+    <p class="use-case-description">
+        $description
+    </p>
+    <ul class="use-case-features">
+      $children
+    </ul>
+    <div class="center use-case-showmore">
+        <Btn id="showmore" padding="20px">
+            Show more
+        </Btn>
+    </div>
 </div>
+
+<style>
+    .use-case-card {
+            background: var(--card-background);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 300px;
+            border: solid 1px var(--accent-color);
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .use-case-icon {
+            width: 60px;
+            height: 60px;
+            background: #10b981;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .use-case-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .use-case-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .use-case-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .use-case-features li {
+            color: #10b981;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .use-case-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+       
+       .use-case-showmore {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+</style>

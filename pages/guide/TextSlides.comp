@@ -15,7 +15,7 @@
 
 <!-- conditions -->
 <div class="slide">
-    <h2>Conditions</h2>
+    <h2>minLength and maxScore</h2>
     <p>
       The <code class="text">search()</code> function can take optionals conditions props.
       These props allow you to specify how the search should be performed. Below is two of them:
@@ -42,6 +42,19 @@
       </ul>
     </p>
 </div>
+
+<!-- maxResult & fallback -->
+<div class="slide">
+    <h2>MaxResult & Fallback</h2>
+    <p>
+      <code class="text">maxResult &lt;Number&gt;</code> allows you to specify the maximum number of results to return.
+      By instance if his value is <code class="text">5</code>, even if there is ten relevent results, just the five most relevants will be returned.
+      <br>
+      <br>
+      The <code class="text">fallback</code> prop allows you to specify a fallback value if no results are found.
+      It can be used to display a message or to return a default value.
+    </p>
+  </div>
 
 <!-- concat & when -->
 <div class="slide">
@@ -80,31 +93,20 @@
 <div class="slide">
     <h2>Strict mode</h2>
     <p>
-      The <code class="text">strict</code> prop specifies if the search should be strict or not.
+      The <code class="text">strict</code> prop specify if the search should be strict or not.
       If it's set to <code class="text">true</code>, the search will only return results that match the query exactly.
-      If it's set to <code class="text">false</code>, the search will return results that partially match the query.
+      If it's set to <code class="text">false</code>, the search will return results that match the query partially.
       <br>
       <br>
-      It can be used to perform a <b>strict</b> search or a <b>fuzzy</b> search depending on your needs.
+      It can be used to do a <b>strict</b> search or a <b>fuzzy</b> search depending to your needs.
     </p>
+    <br>
+    <b>It works also with <code class="text">formatTo</code></b>
 </div>
-
-<!-- maxResult & fallback -->
-<div class="slide">
-    <h2>MaxResult & Fallback</h2>
-    <p>
-      <code class="text">maxResult &lt;Number&gt;</code> allows you to specify the maximum number of results to return.
-      For instance, if its value is <code class="text">5</code>, even if there are ten relevant results, only the five most relevant will be returned.
-      <br>
-      <br>
-      The <code class="text">fallback</code> prop allows you to specify a fallback value if no results are found.
-      It can be used to display a message or return a default value.
-    </p>
-  </div>
 </div>
 
 <style>
-    .slide ul li {
+    .slide ul li{
         font-size: 14px;
     }
 </style>

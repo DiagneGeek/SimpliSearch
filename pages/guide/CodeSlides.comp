@@ -1,0 +1,165 @@
+<import name="Code" from="@components/Code.comp" />
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Simple search in a user list
+const searchUsers = (query, users) => {
+  return search({ query, list: users });
+};
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Search with minLength and maxScore options
+const searchUsers = (query, users) => {
+  // minLength: search starts from 3 characters
+  // maxScore: only highly relevant results (score < 0.5) are kept
+  return search({
+    query,
+    list: users,
+    minLength: 3,
+    maxScore: 0.5
+  });
+};
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Search in a component list with formatting
+const components = [
+  "CtaButton",
+  "NavBar",
+  "SearchBar",
+  "UserCard",
+  "UserList",
+  "Footer"
+];
+
+const searchComponents = (query) => {
+  return search({
+    query,
+    list: components,
+    // formatTo: adapts the case for the search (here PascalCase)
+    formatTo: "pascalcase"
+  });
+};
+
+console.log(searchComponents("cta")); // ["CtaButton", "UserCard"]
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Limit the number of results and target a specific field
+const tasks = [
+  { title: "Develop feature A", completed: true },
+  { title: "Fix bug #123 of feature B", completed: false },
+  { title: "Remove the unused feature C", completed: true }
+];
+
+const completedTasks = search({
+  query: "feature",
+  list: tasks,
+  maxResults: 2, // Limit to 2 results
+  fallback: "No tasks found", // Fallback message if no results
+  targets: ["title"] // Search only in the 'title' field
+});
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Using concat, when and onFinish
+const tasks = [
+  { title: "Finish my product", completed: false },
+  { title: "UserCard", completed: false }
+];
+
+search({
+  query: "finish my product",
+  list: tasks,
+  concat: (task) => `<div>${task.title}</div>`, // Concatenate results as HTML
+  when: task => task.completed === false, // Filter: only not completed tasks
+  onFinish: ({ concated }) => {
+    console.log(concated); // "<div>Finish my product</div><div>UserCard</div>"
+  }
+});
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Advanced search with multiple options
+search({
+  query: "user card",
+  list: ["userCard", "userList", "footer"],
+  formatTo: "camelcase",
+  fallback: "No results found", // Message if no result
+  concat: comp => `<div>${comp}</div>`,
+  when: comp => comp.includes("Card"), // Filter: keep only items containing "Card"
+  onFinish: ({ results, concated, formatted, fallback }) => {
+    console.log(results);   // ["UserCard"]
+    console.log(concated);  // "<div>UserCard</div>"
+    console.log(formatted); // "userCard"
+    console.log(fallback);  // "No results found"
+  }
+});
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Search in multiple fields with weights
+const todos = [
+  {
+    title: "Finish my product",
+    tags: "product code finalize",
+    id: 1
+  },
+  {
+    title: "Make my own js framework",
+    tags: "js javascript framework innovative",
+    id: 2
+  }
+];
+
+const results = search({
+  query: "framework",
+  list: todos,
+  targets: [
+    { key: "title", weight: 1 },    // High weight for title
+    { key: "tags", weight: 0.5 }    // Lower weight for tags
+  ]
+});
+</Code>
+</div>
+
+<div class="slide">
+<Code class="hljs js">
+// Example: Strict mode with formatTo
+const items = [
+  "Finalize-product",
+  "Final-testing",
+  "Finally-done"
+];
+
+const strictResults = search({
+  query: "final testing",
+  list: items,
+  formatTo: "kebabcase",
+  strict: true, // Only exact matches
+  fallback: "No results found"
+});
+console.log(strictResults); // ["Final-testing"]
+
+// Also works without formatTo
+const strictResults2 = search({
+  query: "Finalize-product",
+  list: items,
+  strict: true
+});
+console.log(strictResults2); // ["Finalize-product"]
+</Code>
+</div>
