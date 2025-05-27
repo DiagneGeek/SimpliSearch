@@ -1,11 +1,12 @@
 <import name="NavBar" from="@components/NavBar.comp" />
 <import name="Btn" from="@components/Button.comp" />
 <import name="Header" from="@components/Header.comp" />
+<import name="Dialog" from="@components/Dialog.comp" />
 <import name="Card" from="./Card.comp" />
 
 <NavBar>
   <nav>
-    <a href="/pages/exemples/">Exemples</a>
+    <a href="#">Usages</a>
     <a href="/pages/guide/">Guide</a>
     <a href="/pages/login/" class="cta">
       <Btn padding="10px" id="first-cta">Let's go</Btn>
@@ -68,6 +69,7 @@
     </Card>
 
   </section>
+
 </main>
 
 

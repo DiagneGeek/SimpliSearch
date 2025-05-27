@@ -25,7 +25,8 @@
       width: 100px;
       p{
         font-weight: bold;
-        font-family: "Ubuntu", inter;
+        font-family: inter;
+        color: var(--heading-color);
       }
     }
     nav{

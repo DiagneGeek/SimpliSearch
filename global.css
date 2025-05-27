@@ -2,8 +2,8 @@
   
   :root {
     --background-color: #f4f4f4;
-    --text-color: rgb(47, 52, 47);
-    --light-text-color: #838A80;
+    --text-color: #545B56;
+    --light-text-color: white;
     --accent-color: oklch(69.6% 0.17 162.48);
     --secondary-color: #F87171;
     --heading-color: #0a0a0a;
@@ -14,7 +14,7 @@
     --hover-accent-color: #58E3B4;
   }
   
-  * {
+  *:not(dialog){
     margin: 0;
     padding: 0;
     border: none;

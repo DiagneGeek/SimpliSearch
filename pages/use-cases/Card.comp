@@ -1,4 +1,4 @@
-<import name="Btn" from="@components/Btn.comp" />
+<import name="Btn" from="@components/Button.comp" />
 
 <div class="use-case-card">
    <div class="use-case-icon">$icon</div>
@@ -9,25 +9,21 @@
     <ul class="use-case-features">
       $children
     </ul>
-    <div class="center use-case-showmore">
-        <Btn id="showmore" padding="20px">
-            Show more
-        </Btn>
-    </div>
+    
 </div>
 
 <style>
     .use-case-card {
             background: var(--card-background);
             border-radius: 20px;
-            padding: 40px 30px;
+            padding: 20px 30px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 300px;
             border: solid 1px var(--accent-color);
             position: relative;
-            padding-bottom: 100px;
+            padding-bottom: 20px;
         }
 
         .use-case-card:hover {
@@ -53,12 +49,13 @@
             font-weight: 700;
             margin-bottom: 15px;
             color: #1a1a1a;
+            text-align: left;
         }
 
         .use-case-description {
             color: #666;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
 
         .use-case-features {

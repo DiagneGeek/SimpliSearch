@@ -1,0 +1,40 @@
+ <dialog id="$id">
+  <button onclick="document.querySelector('#$id').close()">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="green" class="size-2">
+  <path fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" />
+</svg>
+   <pre> </pre>
+   close
+  </button>
+  
+  $children 
+
+ </dialog>
+
+ 
+ <style>
+  dialog {
+   width: 90vw;
+   max-width: 600px;
+   border-radius: 14px;
+   background:#0d1117;
+   padding:10px;
+   margin: 0 auto;
+   position: fixed;
+   top: 20%;
+   button{
+   background: transparent;
+   border: none;
+   color: #C8CFCA;
+   border-radius: 9px;
+   padding: 8px;
+   margin-bottom: 15px;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   &:hover{
+    background: #24292C;
+  }
+  }
+  }
+ </style>

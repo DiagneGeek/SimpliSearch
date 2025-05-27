@@ -41,7 +41,7 @@ const fetchFiles = async (url, name, pathLayout) => {
   const filename = url.slice(url.lastIndexOf('/') + 1)
   if (!filename.endsWith('.comp')) return []
   const res = await fetch(url)
-  console.log(res)
+
   if (!res.ok) {
     console.error('failed to fetch ' + url)
     return [] // Retourner un tableau vide en cas d'échec de fetch
