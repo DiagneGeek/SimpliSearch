@@ -1,5 +1,5 @@
 <import name="Btn" from="@components/Button.comp" />
-
+ 
 <div class="use-case-card">
    <div class="use-case-icon">$icon</div>
     <h3 class="use-case-title">$title</h3>
@@ -9,12 +9,11 @@
     <ul class="use-case-features">
       $children
     </ul>
-    
 </div>
 
 <style>
     .use-case-card {
-            background: var(--card-background);
+           ،،   background: var(--card-background);
             border-radius: 20px;
             padding: 20px 30px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);

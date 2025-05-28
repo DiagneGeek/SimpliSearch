@@ -80,10 +80,10 @@ const tasks = [
 search({
   query: "finish my product",
   list: tasks,
-  concat: (task) => `<div>${task.title}</div>`, // Concatenate results as HTML
+  concat: (task) => `&lt;div&gt;${task.title}&lt;/div&gt;`, // Concatenate results as HTML
   when: task => task.completed === false, // Filter: only not completed tasks
   onFinish: ({ concated }) => {
-    console.log(concated); // "<div>Finish my product</div><div>UserCard</div>"
+    console.log(concated); // "&lt;div&gt;Finish my product&lt;/div&gt;&lt,div&gt;UserCard%lt;/div&gt;"
   }
 });
 </Code>
@@ -97,15 +97,15 @@ search({
   list: ["userCard", "userList", "footer"],
   formatTo: "camelcase",
   fallback: "No results found", // Message if no result
-  concat: comp => `<div>${comp}</div>`,
+  concat: comp => `&lt;div>${comp}&lt;/div>`,
   when: comp => comp.includes("Card"), // Filter: keep only items containing "Card"
   onFinish: ({ results, concated, formatted, fallback }) => {
     console.log(results);   // ["UserCard"]
-    console.log(concated);  // "<div>UserCard</div>"
+    console.log(concated);  // "&lt;div>UserCard&lt;/div>"
     console.log(formatted); // "userCard"
     console.log(fallback);  // "No results found"
   }
-});
+});       
 </Code>
 </div>
 

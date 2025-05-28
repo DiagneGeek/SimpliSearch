@@ -31,15 +31,15 @@
  <p>simplisearch</p>
  </div>
  <nav>
- <a href="">Exemples</a>
- <a href="pages/guide">Guide</a>
- <a href="pages/login" class="cta">
-  <button class="btn-xyzz $class">Let's go</button>
+ <a href="/pages/use-cases/">Usages</a>
+ <a href="/pages/guide/">Guide</a>
+ <a href="/pages/login/" class="cta">
+  <button class="btn-xyzz $class" id="z">Let's go</button>
 
 <style>
  .btn-xyzz{
  padding: 10px;
- border: solid 2px var(--hover-accent-color);
+ border: solid 2px $border;
  color: white;
  background: var(--accent-color);
  margin: 3px;
@@ -73,7 +73,8 @@
   width: 100px;
   p{
   font-weight: bold;
-  font-family: "Ubuntu", inter;
+  font-family: inter;
+  color: var(--heading-color);
   }
  }
  nav{
@@ -106,7 +107,7 @@
   SimpliSearch helps you build ultra-fast, intelligent filters in seconds — with a lightweight algorithm that saves time and keeps your code clean.
  </p>
  <a href="/pages/login">
-  <button class="btn-xyzx shadow">Start now</button>
+  <button class="btn-xyzx shadow" id="x">Start now</button>
 
 <style>
  .btn-xyzx{
@@ -253,7 +254,6 @@
 
  header {
  padding: 10px 0 100px 0;
- margin-bottom: 50px;
  box-sizing: border-box;
  display: flex;
  flex-direction: column;
@@ -394,7 +394,7 @@
 <style>
  .fade-in-section{
  padding: 35px;
- margin: 60px 0;
+ margin: 100px 0;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -516,7 +516,7 @@
 <style>
  .fade-in-section{
  padding: 35px;
- margin: 60px 0;
+ margin: 100px 0;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -543,7 +543,7 @@
  </p>
  <br><br>
  <pre>
-<code class="hljs shadow js shadow">const todos = [...]
+<code class="hljs shadow js">const todos = [...]
 
  const searchCompletedTodos = () => {
  const results = search({ 
@@ -577,7 +577,7 @@
 <style>
  .fade-in-section{
  padding: 35px;
- margin: 60px 0;
+ margin: 100px 0;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -615,7 +615,7 @@
  <br>
  <div class="center">
  <a href="pages/login">
- <button class="btn-xyzpricing center gap-1 bg-transparent color-primary">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--accent-color)" class="size-2">
+ <button class="btn-xyzpricing center gap-1 bg-transparent color-primary" id="pricing">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--accent-color)" class="size-2">
  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
 </svg></button>
 
@@ -649,11 +649,23 @@
  border: solid 3px var(--heading-color);
  margin: 25px 0;
  padding: 15px;
- background: var(--card-background);
  b{
   font-size:xx-large;
  }
-
+ ul{
+  margin-top: 10px; 
+  li{
+   color: var(--accent-color);
+   font-family: "Montserrat", inter;
+   font-size: 15px;
+   font-weight: 700;
+   padding: 3px 0;
+   &::before{
+    content: "-";
+    padding-right: 4px;
+   }
+  }
+ }
  }
 </style>
 </section>
@@ -661,7 +673,7 @@
 <style>
  .fade-in-section{
  padding: 35px;
- margin: 60px 0;
+ margin: 100px 0;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -687,12 +699,12 @@
  With SimpliSearch, you can build a search system in just one line of code. Save time and energy for your other projects. Never fear building a search system again!
  </p>
  <br>
- <a href="pages/login"><button class="btn-xyzd $class">Join the dream!</button>
+ <a href="pages/login"><button class="btn-xyzd $class" id="d">Join the dream!</button>
 
 <style>
  .btn-xyzd{
  padding: 14px;
- border: solid 2px var(--hover-accent-color);
+ border: solid 2px $border;
  color: white;
  background: var(--accent-color);
  margin: 3px;
@@ -711,7 +723,7 @@
 <style>
  .fade-in-section{
  padding: 35px;
- margin: 60px 0;
+ margin: 100px 0;
  display: flex;
  flex-direction: column;
  align-items: center;

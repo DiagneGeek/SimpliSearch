@@ -6,42 +6,85 @@
 
 <main class="login">
   <h1>It's time to <b>Get</b> the dream</h1>
-   <Form type="signIn" class="sign-in" message="Welcome back!">
-     <p>Don't have account? <button><b>sign up</b></button></p>
-   </Form>
+  <div class="container">
+    <Form type="signUp" class="sign-up" message="Nice to meet you !">
+      <p>Already have an account? <button onclick="moveToSignIn()"><b>Sign In</b></button></p>
+    </Form>
+  </div>
 </main>
 
 <script>
-const select = (s,t) => (t || document).querySelector(s)
-const selectAll = (s,t) => (t || document).querySelectorAll(s)
-
-const emailMess = select(".login .emailMess")
-const passwordMess = select(".login .passwordMess")
-
-selectAll(".login form").forEach(form => {
-  const emailInput = select("input[type='email']", form)
-  const passwordInput = select("input[type='password']", form)
+  const select = (s, t) => (t || document).querySelector(s)
+  const selectAll = (s, t) => (t || document).querySelectorAll(s)
   
-  emailInput.addEventListener("input", e => {
-     const isValid = e.target.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
-     if(isValid == null) {
-       emailMess.innerText = "Email not valid"
-       emailMess.style.color = "red"
-     }
-     else{
-       emailMess.innerText = "👍 Your email is valid"
-       emailMess.style.color = "green"
-     }
-  })
+  let loginType = "signup"
   
-  passwordInput.addEventListener("input", e => {
-     if(e.target.value.length > 5){
-       passwordMess.innerText = "🤫 your password is secure"
-       passwordMess.style.color = "green"
-     }else {
-       passwordMess.innerText = "password.length must be >= 6"
-       passwordMess.style.color = "red"
-     }
-  })
-})
+  const signInFormContent = ` <Form type="signIn" class="sign-in" message="Welcome back!">
+     <p>Don't have an account? <button onclick="moveToSignUp()"><b>Sign Up</b></button></p>
+   </Form>`;
+  
+  const signUpFormContent = ` <Form type="signUp" class="sign-up" message="Nice to meet you !">
+     <p>Already have an account? <button onclick="moveToSignIn()"><b>sign in</b></button></p>
+   </Form>`
+  
+  const load = () => {
+    const emailMess = select(".login .emailMess")
+    const passwordMess = select(".login .passwordMess")
+    
+    selectAll(".login form").forEach(form => {
+      const emailInput = select("input[type='email']", form)
+      const passwordInput = select("input[type='password']", form)
+      
+      let emailIsValid = false
+      let passwordIsValid = false
+      
+      emailInput.addEventListener("input", e => {
+        const isValid = e.target.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
+        if (isValid == null) {
+          emailIsValid = false
+          emailMess.innerText = "Email not valid"
+          emailMess.style.color = "red"
+        }
+        else {
+          emailIsValid = true
+          emailMess.innerText = "👍 Your email is valid"
+          emailMess.style.color = "green"
+        }
+      })
+      
+      passwordInput.addEventListener("input", e => {
+        if (e.target.value.length > 5) {
+          passwordIsValid = true
+          passwordMess.innerText = "🤫 your password is secure"
+          passwordMess.style.color = "green"
+        } else {
+          passwordIsValid = false
+          passwordMess.innerText = "password.length must be >= 6"
+          passwordMess.style.color = "red"
+        }
+      })
+      
+      form.onsubmit = e => {
+        e.preventDefault()
+        console.log(passwordIsValid)
+        if(passwordIsValid && emailIsValid){
+          if(loginType == "signup") return signUp()
+          else return signIn()
+        }
+      }
+    })
+  };
+  load()
+  
+  const moveToSignIn = () => {
+    loginType = "signin"
+    select(".container").innerHTML = signInFormContent
+    load()
+  }
+  
+  const moveToSignUp = () => {
+    loginType = "signup"
+    select(".container").innerHTML = signUpFormContent
+    load()
+  }
 </script>
