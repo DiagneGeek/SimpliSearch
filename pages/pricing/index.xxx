@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="Invest for gain time and provide better experiences to your user for only $44.99">
+    <meta name="keywords" content="simplisearch, search engine, data search, simple search, filter alghorithm, how can i filter my data, search my data, search engine for my data, search engine for my files, search engine for my documents, search engine for my images, search engine for my videos, search engine for my music">
+    <meta name="author" content="simplisearch">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+     <link rel="stylesheet" href="/global.css" type="text/css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+ <title>Pricing • simplisearch</title>
+</head>
+<body>
+  <div id="app">PRICING</div>
+ <script type="module">
+  import { render } from '../../index.js'
+  await render('./index.comp', { from: 'components', to: '../../components' })
+ </script>
+</body>
+</html>

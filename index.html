@@ -18,7 +18,7 @@
  <!-- _____________________________ -->
  
 <div class="nav-bar">
- <div class="logo">
+ <a class="logo" href="/">
  <img src="/assets/logo.png" alt="logo" class="logoIcon" />
 
 <style>
@@ -29,7 +29,7 @@
 </style>
 
  <p>simplisearch</p>
- </div>
+ </a>
  <nav>
  <a href="/pages/use-cases/">Usages</a>
  <a href="/pages/guide/">Guide</a>
@@ -39,7 +39,7 @@
 <style>
  .btn-xyzz{
  padding: 10px;
- border: solid 2px $border;
+ border: solid 2px #00C896;
  color: white;
  background: var(--accent-color);
  margin: 3px;
@@ -107,7 +107,7 @@
   SimpliSearch helps you build ultra-fast, intelligent filters in seconds — with a lightweight algorithm that saves time and keeps your code clean.
  </p>
  <a href="/pages/login">
-  <button class="btn-xyzx shadow" id="x">Start now</button>
+  <button class="btn-xyzx shadow" id="x">Start now (100% free)</button>
 
 <style>
  .btn-xyzx{
@@ -258,7 +258,7 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- height: 100vh;
+ 
  animation: fadeInDown 1s ease-out forwards;
 
  h1 {
@@ -537,9 +537,9 @@
 
 <section class="fade-in-section">
  <p class="subtitle">What we provide</p>
- <h2>20+ options to get better results in every case</h2>
+ <h2>Flexibility to deliver better results in every case</h2>
  <p class="text">
- SimpliSearch gives you many options like formatting, conditions, tolerance, and more. They’re here to make sure every need, in every situation, is solved easily and efficiently.
+ SimpliSearch is built for maximum flexibility. That’s why we offer all the tools you need to create exceptional search systems for any situation and every type of query.
  </p>
  <br><br>
  <pre>
@@ -551,8 +551,15 @@
   list: todos,
   targets: [{key: "title", weight: 1}, {key: "description", weight: 0.5}],
   when: (todo) => todo.completed === true,
-  maxResults: 5
-  ...
+  maxResults: 5,
+  addedSynonims: [
+   ["finish", "done", "complete"]
+  ],
+  concat: todo => `&lt;div&gt; ${todo.title} &lt;/div&gt;`,
+  onFinish: ({ concated }) => {
+  suggestions.innerHTML = concated
+  }
+  ...andOthers
  })
  }</code>
 </pre>
@@ -596,101 +603,6 @@
 </style>
 
 
-<section class="fade-in-section">
- <p class="subtitle">Pricing</p>
- <h2>Invest in better Developer and User Experience</h2>
- <p>
- With this simple and easy step, you’ll never be afraid of building a search system again!
- </p>
- <div class="pricing-card">
- <h3><b>$39.99</b><br> for all your live</h3>
- <ul>
-  <li>Unlimited search requests</li>
- <li>All methods included</li>
- <li>Plug-and-play integration</li>
- <li>Frequent updates</li>
- <li>Fast and reliable</li>
- <li>In short, all features included</li>
- </ul>
- <br>
- <div class="center">
- <a href="pages/login">
- <button class="btn-xyzpricing center gap-1 bg-transparent color-primary" id="pricing">So cheap <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--accent-color)" class="size-2">
- <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-</svg></button>
-
-<style>
- .btn-xyzpricing{
- padding: 15px 12px;
- border: solid 2px var(--accent-color);
- color: white;
- background: var(--accent-color);
- margin: 3px;
- border-radius: var(--lg-radius);
- font-family: "Montserrat";
- font-weight: 600;
- &:hover{
-  background: var(--hover-accent-color);
-  scale: 0.9; 
- }
- }
-</style>
-
- </a>
- </div>
-
-</div>
-
-<style>
- .pricing-card{
- width: 250px;
- height: 310px;
- border-radius: var(--lg-radius);
- border: solid 3px var(--heading-color);
- margin: 25px 0;
- padding: 15px;
- b{
-  font-size:xx-large;
- }
- ul{
-  margin-top: 10px; 
-  li{
-   color: var(--accent-color);
-   font-family: "Montserrat", inter;
-   font-size: 15px;
-   font-weight: 700;
-   padding: 3px 0;
-   &::before{
-    content: "-";
-    padding-right: 4px;
-   }
-  }
- }
- }
-</style>
-</section>
-
-<style>
- .fade-in-section{
- padding: 35px;
- margin: 100px 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- h2{
-  font-size: clamp(2rem, 3vw, 4rem);
- }
- .subtitle{
-  color: var(--accent-color);
-  text-align: center;
-  font-family: "Smooch", fantasy;
- }
- p.text{
-  max-width: 500px;
- }
- }
-</style>
-
 
 <section class="fade-in-section">
  <p class="subtitle">Conclusion</p>
@@ -704,7 +616,7 @@
 <style>
  .btn-xyzd{
  padding: 14px;
- border: solid 2px $border;
+ border: solid 2px #00C896;
  color: white;
  background: var(--accent-color);
  margin: 3px;
@@ -741,10 +653,160 @@
  }
 </style>
 
+ 
+ <div class="faq center">
+ <h2><b>Frequently</b> Asked Questions</h2>
+ <br>
+ <details class="accordion">
+ <summary>What is SimpliSearch?</summary>
+ <div class="accordion-content">
+ <p>SimpliSearch is THE solution to make powerful and smarter search system with javascript</p>
+ </div>
+ </details>
+ 
+ <details class="accordion">
+ <summary>How do I use it?</summary>
+ <div class="accordion-content">
+ you can use SimpliSearch by creating your api key and call the <code class="text">createSearchSystem()</code> function with as param your api key. <a href="/guide">Learn more</a>
+ </div>
+ </details>
+ 
+ <details class="accordion">
+ <summary>What can I do with it?</summary>
+ <div class="accordion-content">
+ <ul>
+ <li>Filter arrays based on multiple fields</li>
+ <li>Enable fuzzy search</li>
+ <li>Assign weights to certain fields</li>
+ <li>Create a simple in-browser search engine</li>
+ </ul>
+ </div>
+ </details>
+ 
+ <details class="accordion">
+ <summary>Is it fast?</summary>
+ <div class="accordion-content">
+ <p>Yes! SimpliSearch is optimized for performance and can handle thousands of entries with ease.</p>
+ </div>
+ </details>
+ 
+ <details class="accordion">
+ <summary>Is it compatible with frameworks?</summary>
+ <div class="accordion-content">
+ <p>Yes, SimpliSearch is framework-agnostic. You can use it in any JavaScript project, including React, Vue, Node.js, Svelte, and Vanilla JS. Everywhere javascript works, simplisearch works</p>
+ </div>
+ </details>
+ 
+ <details class="accordion">
+ <summary>Does it support accented or multilingual searches?</summary>
+ <div class="accordion-content">
+ <p>Yes, you just need to configure it !</p>
+ </div>
+ </details>
+ 
+ 
+ <details class="accordion">
+ <summary>Where is the documentation?</summary>
+ <div class="accordion-content">
+ <p>You can find the full documentation at: <a href="/guide">/guide</a></p>
+ </div>
+ </details>
+</div>
+
+
+
+<style>
+ .faq {
+ max-width: 800px;
+ margin: 0 auto;
+ flex-direction: column;
+ }
+ 
+ .accordion {
+ background: var(--card-background);
+ border-radius: var(--lg-radius);
+ border: solid 1px var(--accent-color);
+ margin-bottom: 1.5rem;
+ overflow: hidden;
+ transition: all 0.5s ease;
+ max-width: 500px;
+ width: 90%;
+ }
+ 
+ .accordion summary {
+ padding: 1rem 1.5rem;
+ font-weight: 600;
+ list-style: none;
+ position: relative;
+ display: flex;
+ align-items: center;
+ color: var(--heading-color);
+ }
+ 
+ .accordion summary::marker,
+ .accordion summary::-webkit-details-marker {
+ display: none;
+ }
+ 
+ .accordion[open] summary {
+ color: var(--accent-color);
+ }
+ 
+ .accordion summary::after {
+ content: "＋";
+ position: absolute;
+ right: 1.5rem;
+ font-size: 1.5rem;
+ }
+ 
+ .accordion[open] summary::after {
+ content: "−";
+ }
+ 
+ .accordion-content {
+ padding: 0 1.5rem 1rem;
+ animation: fade 0.3s ease;
+ }
+ 
+ @keyframes fade {
+ from {
+ opacity: 0;
+ transform: translateY(-5px);
+ }
+ 
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+ }
+ 
+ code,
+ pre {
+ background: #eee;
+ padding: 0.2rem 0.4rem;
+ border-radius: 0.3rem;
+ display: inline-block;
+ margin-top: 0.5rem;
+ }
+ 
+ pre {
+ padding: 1rem;
+ overflow-x: auto;
+ }
+ 
+ a {
+ color: var(--accent);
+ text-decoration: none;
+ }
+</style>
 </main>
 
+<script type="module">
+ const _0x517f75=_0x24fb;(function(_0x1e9ad3,_0x325dcb){const _0x5a4a71=_0x24fb,_0x926bba=_0x1e9ad3();while(!![]){try{const _0x385060=parseInt(_0x5a4a71(0x1a5))/0x1*(parseInt(_0x5a4a71(0x1a9))/0x2)+-parseInt(_0x5a4a71(0x1a3))/0x3*(parseInt(_0x5a4a71(0x19d))/0x4)+-parseInt(_0x5a4a71(0x1a6))/0x5*(parseInt(_0x5a4a71(0x1af))/0x6)+parseInt(_0x5a4a71(0x1ad))/0x7*(parseInt(_0x5a4a71(0x1aa))/0x8)+-parseInt(_0x5a4a71(0x1a4))/0x9*(parseInt(_0x5a4a71(0x1a8))/0xa)+parseInt(_0x5a4a71(0x1a0))/0xb+parseInt(_0x5a4a71(0x1ac))/0xc;if(_0x385060===_0x325dcb)break;else _0x926bba['push'](_0x926bba['shift']());}catch(_0x5897d4){_0x926bba['push'](_0x926bba['shift']());}}}(_0x2e14,0x47ad1));import{createClient}from'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';const t02x=createClient('https://wrlaxgtgmiclprseeqri.supabase.co',_0x517f75(0x1a2)),Auth=t02x[_0x517f75(0x19c)],Select=(_0x35f123,_0x5eccd8)=>t02x['from'](_0x35f123)[_0x517f75(0x1a7)](_0x5eccd8),{data:{user},notExist}=await Auth[_0x517f75(0x1ab)]();if(user){const id=user['id'],{data:users,error}=await Select(_0x517f75(0x19e),'*');if(!error){const userInfos=users[_0x517f75(0x1a1)](_0x1854dd=>_0x1854dd['id']===user['id']);userInfos&&(window[_0x517f75(0x1ae)][_0x517f75(0x19f)]='/app/interface/home/');}}function _0x24fb(_0x198d4b,_0x1b33cc){const _0x2e14b7=_0x2e14();return _0x24fb=function(_0x24fb0e,_0x297313){_0x24fb0e=_0x24fb0e-0x19c;let _0x3690c0=_0x2e14b7[_0x24fb0e];return _0x3690c0;},_0x24fb(_0x198d4b,_0x1b33cc);}function _0x2e14(){const _0x39847b=['10679844GaISxW','1637657gKNxuo','location','3179904TaAbZG','auth','58768JognXd','users','href','1704230eXspQY','find','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndybGF4Z3RnbWljbHByc2VlcXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDk4NzcsImV4cCI6MjA2MjU4NTg3N30.1WBo6M1iNd4kRo51P5JuKGDWsncpxWXQ7NfAkZKTUd0','102BwUozg','658899YtBeFe','1epRdsq','5IYqjjf','select','40NOjFXi','674146INQeOx','8vJvXmu','getUser'];_0x2e14=function(){return _0x39847b;};return _0x2e14();}
+</script>
+
 <footer style="
- background-color: white;
+ background-color: var(--heading-color);
  border-top: 1px solid #ddd;
  padding: 40px 20px;
  font-family: 'Montserrat', sans-serif;
@@ -754,7 +816,7 @@
  text-align: center;
  gap: 20px;
 ">
- <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--heading-color);">
+ <div style="font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 500; color: var(--accent-color);">
  SimpliSearch
  </div>
  
@@ -762,7 +824,7 @@
  <a href="pages/guide" style="color: var(--light-text-color); font-size: 14px;">Guide</a>
  <a href="pages/login" style="color: var(--light-text-color); font-size: 14px;">Login</a>
  <a href="/feedback" style="color: var(--light-text-color); font-size: 14px;">Feedback</a>
- <a href="/legal" style="color: var(--light-text-color); font-size: 14px;">legal</a>
+ <a href="https://x.com/SimpliSearch" style="color: var(--light-text-color); font-size: 14px;"><img style="width: 24px" src="/assets/x-logo.jpg" alt="" /></a>
  </div>
  
  <div style="font-size: 13px; color: var(--light-text-color);">

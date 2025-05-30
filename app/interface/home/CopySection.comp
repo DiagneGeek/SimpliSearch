@@ -1,0 +1,74 @@
+<style>
+  .api-key-box {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    background: #f4f4f4;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--sm-radius);
+    padding: 3px 16px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 600px;
+  }
+
+  .api-key-text {
+    font-weight: 500;
+    color: #333;
+    user-select: all;
+    font-size: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 5px;
+    
+  }
+
+  .copy-button {
+    color: #000;
+    background: var(--accent-color);
+    border: none;
+    padding: 8px 25px;
+    border-radius: var(--lg-radius);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+
+  .copy-button:hover {
+    background-color: var(--hover-accent-color);
+  }
+
+  .copy-success {
+    margin-left: 5px;
+    color: #3cb371;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .copy-success.visible {
+    opacity: 1;
+  }
+</style>
+
+  <h2>Your api key :</h2>
+<div class="api-key-box">
+  <span class="api-key-text" id="apiKey">$tocopy</span>
+  <div style="display: flex; align-items: center; gap: 8px; padding:5px">
+    <button class="copy-button" onclick="copyApiKey()">Copy</button>
+    <span class="copy-success" id="copySuccess">Copied!</span>
+  </div>
+</div>
+
+<script>
+  function copyApiKey() {
+    const keyText = document.getElementById('apiKey').innerText;
+    navigator.clipboard.writeText(keyText).then(() => {
+      const successEl = document.getElementById('copySuccess');
+      successEl.classList.add('visible');
+      setTimeout(() => {
+        successEl.classList.remove('visible');
+      }, 1500);
+    });
+  }
+</script>

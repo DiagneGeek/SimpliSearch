@@ -1,0 +1,32 @@
+<import name="NavBar" from="@components/NavBar.comp" />
+<import name="Header" from="@components/Header.comp" />
+<import name="NavBar" from="@components/NavBar.comp" />
+<import name="PricingCard" from="@components/PricingCard.comp" />
+
+<NavBar>
+  <nav>
+    <a href="/pages/use-cases/">Usages</a>
+    <a href="/pages/guide/">Guide</a>
+     <span></span>    <span></span>
+  </nav>
+</NavBar>
+
+<main>
+  <div style="height: 25svh;">
+    <Header>
+      <h1>Just <b>One</b> more step</h1>
+      <div></div>
+      <PricingCard price="$44.99">
+        <li>Unlimited search requests</li>
+        <li>All methods included</li>
+        <li>Plug-and-play integration</li>
+        <li>Frequent updates</li>
+        <li>Fast and reliable</li>
+        <li>built-in synonims support</li>
+        <li>Customizable synonims</li>
+        <li>Gestions of spelling errors</li>
+        <li>Works on both client slide and server side</li>
+      </PricingCard>
+    </Header>
+  </div>
+</main>

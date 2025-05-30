@@ -1,0 +1,145 @@
+<div class="faq center">
+ <h2><b>Frequently</b> Asked Questions</h2>
+ <br>
+ <details class="accordion">
+  <summary>What is SimpliSearch?</summary>
+  <div class="accordion-content">
+   <p>SimpliSearch is THE solution to make powerful and smarter search system with javascript</p>
+  </div>
+ </details>
+ 
+ <details class="accordion">
+  <summary>How do I use it?</summary>
+  <div class="accordion-content">
+   you can use SimpliSearch by creating your api key and call the <code class="text">createSearchSystem()</code> function with as param your api key. <a href="/guide">Learn more</a>
+  </div>
+ </details>
+ 
+ <details class="accordion">
+  <summary>What can I do with it?</summary>
+  <div class="accordion-content">
+   <ul>
+    <li>Filter arrays based on multiple fields</li>
+    <li>Enable fuzzy search</li>
+    <li>Assign weights to certain fields</li>
+    <li>Create a simple in-browser search engine</li>
+   </ul>
+  </div>
+ </details>
+ 
+ <details class="accordion">
+  <summary>Is it fast?</summary>
+  <div class="accordion-content">
+   <p>Yes! SimpliSearch is optimized for performance and can handle thousands of entries with ease.</p>
+  </div>
+ </details>
+ 
+ <details class="accordion">
+  <summary>Is it compatible with frameworks?</summary>
+  <div class="accordion-content">
+   <p>Yes, SimpliSearch is framework-agnostic. You can use it in any JavaScript project, including React, Vue, Node.js, Svelte, and Vanilla JS. Everywhere javascript works, simplisearch works</p>
+  </div>
+ </details>
+ 
+ <details class="accordion">
+  <summary>Does it support accented or multilingual searches?</summary>
+  <div class="accordion-content">
+   <p>Yes, you just need to configure it !</p>
+  </div>
+ </details>
+ 
+ 
+ <details class="accordion">
+  <summary>Where is the documentation?</summary>
+  <div class="accordion-content">
+   <p>You can find the full documentation at: <a href="/guide">/guide</a></p>
+  </div>
+ </details>
+</div>
+
+
+
+<style>
+ .faq {
+  max-width: 800px;
+  margin: 0 auto;
+  flex-direction: column;
+ }
+ 
+ .accordion {
+  background: var(--card-background);
+  border-radius: var(--lg-radius);
+  border: solid 1px var(--accent-color);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  max-width: 500px;
+  width: 90%;
+ }
+ 
+ .accordion summary {
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--heading-color);
+ }
+ 
+ .accordion summary::marker,
+ .accordion summary::-webkit-details-marker {
+  display: none;
+ }
+ 
+ .accordion[open] summary {
+  color: var(--accent-color);
+ }
+ 
+ .accordion summary::after {
+  content: "＋";
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.5rem;
+ }
+ 
+ .accordion[open] summary::after {
+  content: "−";
+ }
+ 
+ .accordion-content {
+  padding: 0 1.5rem 1rem;
+  animation: fade 0.3s ease;
+ }
+ 
+ @keyframes fade {
+  from {
+   opacity: 0;
+   transform: translateY(-5px);
+  }
+  
+  to {
+   opacity: 1;
+   transform: translateY(0);
+  }
+ }
+ 
+ code,
+ pre {
+  background: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+ }
+ 
+ pre {
+  padding: 1rem;
+  overflow-x: auto;
+ }
+ 
+ a {
+  color: var(--accent);
+  text-decoration: none;
+ }
+</style>

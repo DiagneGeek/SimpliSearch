@@ -3,7 +3,7 @@
 <style>
   .btn-xyz$id{
     padding: $padding;
-    border: solid 2px $border;
+    border: solid 2px #00C896;
     color: white;
     background: var(--accent-color);
     margin: 3px;

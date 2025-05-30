@@ -1,5 +1,19 @@
 <import name="Code" from="@components/Code.comp" />
 
+
+<div class="slide">
+<Code class="hljs js">
+import { createSearchSystem } from "https://simplisearch.tech/api.js"
+  
+  const apiKey = 'MY_API_KEY'
+  
+  const search = createSearchSystem(apiKey)
+  
+  const filteredList = search({...})
+</Code>
+</div>
+
+
 <div class="slide">
 <Code class="hljs js">
 // Example: Simple search in a user list
@@ -161,5 +175,18 @@ const strictResults2 = search({
   strict: true
 });
 console.log(strictResults2); // ["Finalize-product"]
+</Code>
+</div>
+
+
+<div class="slide">
+<Code class="hljs js">
+search({
+query: "awesome",
+list: [...],
+addedSynonims: [
+    ["wonderful", "amazing", "SimpliSearch"]
+]
+})
 </Code>
 </div>

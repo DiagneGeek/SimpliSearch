@@ -35,9 +35,9 @@
 
 <Section>
   <p class="subtitle">What we provide</p>
-  <h2>20+ options to get better results in every case</h2>
+  <h2>Flexibility to deliver better results in every case</h2>
   <p class="text">
-    SimpliSearch gives you many options like formatting, conditions, tolerance, and more. They’re here to make sure every need, in every situation, is solved easily and efficiently.
+    SimpliSearch is built for maximum flexibility. That’s why we offer all the tools you need to create exceptional search systems for any situation and every type of query.
   </p>
   <br><br>
   <Code class="hljs shadow js">
@@ -49,28 +49,20 @@
       list: todos,
       targets: [{key: "title", weight: 1}, {key: "description", weight: 0.5}],
       when: (todo) => todo.completed === true,
-      maxResults: 5
-      ...
+      maxResults: 5,
+      addedSynonims: [
+         ["finish", "done", "complete"]
+      ],
+      concat: todo => `&lt;div&gt; ${todo.title} &lt;/div&gt;`,
+      onFinish: ({ concated }) => {
+        suggestions.innerHTML = concated
+      }
+      ...andOthers
     })
   }
   </Code>
 </Section>
 
-<Section>
-  <p class="subtitle">Pricing</p>
-  <h2>Invest in better Developer and User Experience</h2>
-  <p>
-    With this simple and easy step, you’ll never be afraid of building a search system again!
-  </p>
-  <PricingCard price="$39.99">
-    <li>Unlimited search requests</li>
-    <li>All methods included</li>
-    <li>Plug-and-play integration</li>
-    <li>Frequent updates</li>
-    <li>Fast and reliable</li>
-    <li>In short, all features included</li>
-  </PricingCard>
-</Section>
 
 <Section>
   <p class="subtitle">Conclusion</p>

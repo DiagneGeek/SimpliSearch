@@ -1,0 +1,100 @@
+<import name="NavBar" from="@components/NavBar.comp" />
+<import name="Btn" from="@components/Button.comp" />
+<import name="Header" from="@components/Header.comp" />
+<import name="Warn" from="@components/Warn.comp" />
+<import name="Section" from="@components/Section.comp" />
+<import name="CopySection" from="./CopySection.comp" />
+
+<NavBar>
+  <nav>
+    <a href="/pages/use-cases">Usages</a>
+    <a href="/pages/guide/">Guide</a>
+    <span></span> <span></span>
+  </nav>
+</NavBar>
+
+<main>
+  
+  <Header>
+    <h1 style="margin: 0;padding:0">Welcome to the <b>dream</b></h1>
+    <br><br><br>
+    
+    <CopySection tocopy="loading" />
+    
+    <Warn warning="Warning" description="Your API KEY must be secret. Use it on front-end just on local" />
+    
+  </Header>
+  <Section>
+    <h2>Read our guide</h2>
+    <p>
+      Read the official guide of SimpliSearch <a href="/pages/guide/"><b>here</b></a>
+    </p>
+  </Section>
+  
+  <Section>
+    <h2>Some use cases ?</h2>
+    <p>
+      Click <a href="/pages/use-cases/"><b>here</b></a> to see some use cases of SimpliSearch
+    </p>
+  </Section>
+  
+</main>
+
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+  
+  const supabase = createClient('https://wrlaxgtgmiclprseeqri.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndybGF4Z3RnbWljbHByc2VlcXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDk4NzcsImV4cCI6MjA2MjU4NTg3N30.1WBo6M1iNd4kRo51P5JuKGDWsncpxWXQ7NfAkZKTUd0')
+  
+  const Auth = supabase.auth
+  const Select = (from, rows) => supabase.from(from).select(rows)
+  
+  const { data: { user }, notExist } = await Auth.getUser()
+  if (!user) window.location.href = '/pages/login/'
+  
+  const id = user.id
+  
+  const { data: users, error } = await Select("users", "*")
+  
+  if (error) {
+    window.location.href = '/pages/login/'
+  }
+  
+  const userInfos = users.find(u => u.id === user.id)
+  
+  if (!userInfos) window.location.href = '/pages/login/'
+  
+  document.querySelector(".api-key-box .api-key-text").innerText = userInfos.key
+</script>
+
+<style>
+  body {
+    padding-top: 80px;
+  }
+  
+  .copySection {
+    width: 300px;
+    height: 40px;
+    border: solid 1px var(--accent-color);
+    border-radius: var(--sm-radius);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    
+    p {
+      width: 80%;
+      height: 100%;
+      background: var(--accent-color);
+    }
+    
+    button {
+      background: var(--accent-color) !important;
+      position: absolute;
+      top: 0;
+      left: right;
+    }
+  }
+  
+  .fade-in-section {
+    margin: 30px 0;
+  }
+</style>

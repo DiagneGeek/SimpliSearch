@@ -6,6 +6,7 @@ const compenize = async (url, pathLayout = {from: ""},displayBtn) => {
   root.innerHTML = toDisplay
   root.querySelectorAll('script').forEach(s => {
     const text = s.text.trim()
+  
     const type = s.type
     if (s.src) return
     
@@ -15,25 +16,23 @@ const compenize = async (url, pathLayout = {from: ""},displayBtn) => {
     s.remove()
     root.appendChild(newScript)
   })
+  const btn = document.querySelector('#copy-button');
+  if(!btn) return
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(output)
+  });
+  setTimeout(() => {
+        btn.style.display = 'none';
+  }, 3000);
 }
+
+
 
 const copyBtn = toCopy => (`
   <button id="copy-button"
        style="background: transparent; backdrop-filter:blur(10px); border: 1px solid white; color: #565756; padding: 8px 16px;  position: fixed; bottom: 30px; left: 2%;">
     Copy output
 </button>
-
-<script>
-  const btn = document.querySelector('#copy-button');
-  btn.addEventListener('click', () => {
-    navigator.clipboard.writeText(\`${toCopy}\`)
-  });
-  
-  setTimeout(() => {
-        btn.style.display = 'none';
-  }, 3000);
-  </script>
-  <br>
 `)
 
 const fetchFiles = async (url, name, pathLayout) => {

@@ -114,7 +114,7 @@
  }
  
  .buttons button {
-  padding: 13px;
+  padding:13px 6px;
   border: solid 2px var(--hover-accent-color);
   color: var(--text-color);
   background: var(--card-background);

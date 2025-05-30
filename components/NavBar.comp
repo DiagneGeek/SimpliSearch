@@ -2,10 +2,10 @@
 <import name="Logo" from="@components/Logo.comp" />
 
 <div class="nav-bar">
-  <div class="logo">
+  <a class="logo" href="/">
     <Logo />
     <p>simplisearch</p>
-  </div>
+  </a>
   $children
 </div>
 

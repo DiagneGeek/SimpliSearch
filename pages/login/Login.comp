@@ -8,23 +8,28 @@
   <h1>It's time to <b>Get</b> the dream</h1>
   <div class="container">
     <Form type="signUp" class="sign-up" message="Nice to meet you !">
-      <p>Already have an account? <button onclick="moveToSignIn()"><b>Sign In</b></button></p>
+      <p>Already have an account? <button class="moveToSignIn"><b>Sign In</b></button></p>
     </Form>
   </div>
+  <p id="error-mess" style="color: indianred; text-align: center;"></p>
 </main>
 
-<script>
+<script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+  
   const select = (s, t) => (t || document).querySelector(s)
   const selectAll = (s, t) => (t || document).querySelectorAll(s)
+  
+  let form = select("form")
   
   let loginType = "signup"
   
   const signInFormContent = ` <Form type="signIn" class="sign-in" message="Welcome back!">
-     <p>Don't have an account? <button onclick="moveToSignUp()"><b>Sign Up</b></button></p>
+     <p>Don't have an account? <button class="moveToSignUp"><b>Sign Up</b></button></p>
    </Form>`;
   
   const signUpFormContent = ` <Form type="signUp" class="sign-up" message="Nice to meet you !">
-     <p>Already have an account? <button onclick="moveToSignIn()"><b>sign in</b></button></p>
+     <p>Already have an account? <button class="moveToSignIn"><b>sign in</b></button></p>
    </Form>`
   
   const load = () => {
@@ -66,15 +71,88 @@
       
       form.onsubmit = e => {
         e.preventDefault()
-        console.log(passwordIsValid)
-        if(passwordIsValid && emailIsValid){
-          if(loginType == "signup") return signUp()
-          else return signIn()
+        if (passwordIsValid && emailIsValid) {
+          if (loginType == "signup") signUp(e)
+          else signIn(e)
         }
+      }
+      
+      select("form p button").onclick = e => {
+        if (loginType == "signin") return moveToSignUp()
+        else moveToSignIn()
       }
     })
   };
   load()
+  
+  const supabase = createClient('https://wrlaxgtgmiclprseeqri.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndybGF4Z3RnbWljbHByc2VlcXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDk4NzcsImV4cCI6MjA2MjU4NTg3N30.1WBo6M1iNd4kRo51P5JuKGDWsncpxWXQ7NfAkZKTUd0')
+  
+  const Auth = supabase.auth
+  const Select = (from, rows) => supabase.from(from).select(rows)
+  const Insert = (from, rows) => supabase.from(from).insert(rows)
+  
+  function fallbackUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      const r = Math.random() * 16 | 0
+      const v = c === 'x' ? r : (r & 0x3 | 0x8)
+      return v.toString(16)
+    })
+  }
+  
+  const signUp = async (e) => {
+    e.preventDefault()
+    let email = e.target.querySelector('input').value
+      .trim().toLowerCase()
+    let password = e.target.querySelector("input[type='password']").value
+    
+    let { data: { user }, error } = await Auth.signUp({
+      email,
+      password
+    })
+    if (error) {
+      document.querySelector('#error-mess').innerText = error.message
+    } else {
+      
+      const key = (crypto.randomUUID?.() || fallbackUUID())
+      const { data, error } = await Insert("users", [
+        { key, hasPaid: false, id: user.id }
+      ])
+      const m = document.querySelector("#error-mess")
+        m.style.fontSize = "22px"
+        m.style.fontWeight = "900"
+        m.style.color = "green"
+        m.innerText = "Congratulations! An email will be send to confirm your email"
+      setTimeout(() => {
+        window.location.href = '/app/interface/home/'
+      }, 1000)
+    }
+  }
+  
+  
+  const signIn = async (e) => {
+    e.preventDefault()
+    let email = e.target.querySelector('input').value
+      .trim().toLowerCase()
+    let password = e.target.querySelector("input[type='password']").value
+    
+    let { data: { user }, error } = await Auth.signInWithPassword({
+      email,
+      password
+    })
+    if (error) {
+      document.querySelector('#error-mess').innerText = error.message
+    } else {
+      const { data: users, error } = await Select("users", "*")
+      if (error) return document.querySelector('#error-mess').innerText = error
+      
+      const userInfos = users.find(u => u.id === user.id)
+      
+      if (!userInfos) return document.querySelector('#error-mess').innerText = "user not found !"
+      
+        window.location.href = '/app/interface/home/'
+    }
+  }
+  
   
   const moveToSignIn = () => {
     loginType = "signin"
@@ -84,6 +162,7 @@
   
   const moveToSignUp = () => {
     loginType = "signup"
+    
     select(".container").innerHTML = signUpFormContent
     load()
   }

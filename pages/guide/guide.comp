@@ -24,7 +24,8 @@
     <Guide>
        <!-- Navigation Buttons -->
       <div class="buttons">
-        <button class="nav-btn active">Basics</button>
+        <button class="nav-btn active">Integration</button>
+        <button class="nav-btn">Basics</button>
         <button class="nav-btn">minLength & maxScore</button>
         <button class="nav-btn">Formats</button>
         <button class="nav-btn">MaxResult & fallback</button>
@@ -32,6 +33,7 @@
         <button class="nav-btn">On finish</button>
         <button class="nav-btn">Targets</button>
         <button class="nav-btn">Strict mode</button>
+        <button class="nav-btn">Add synonims</button>
       </div>
       
       <div class="carousels">

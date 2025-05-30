@@ -1,0 +1,23 @@
+<div class="center">
+ <div class="warning-box">
+  <h2>$warning</h2>
+  <p>
+     $description 
+  </p>
+  </div>
+</div>
+
+
+<style>
+ .warning-box{
+    border: solid 1px indianred;
+    background: pink;
+    border-radius: var(--lg-radius);
+    margin: 20px;
+    max-width: 500px;
+    padding: 5px;
+    h2{
+      color: red;
+    }
+ }
+</style>
