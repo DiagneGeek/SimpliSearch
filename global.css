@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,480;1,416&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,416&family=Smooch+Sans:wght@100..900&family=Ubuntu:wght@400;500&display=swap');
   
   :root {
     --background-color: #f4f4f4;
@@ -14,7 +14,7 @@
     --hover-accent-color: #58E3B4;
   }
   
-  *:not(dialog){
+  *:not(dialog) {
     margin: 0;
     padding: 0;
     border: none;
@@ -57,39 +57,65 @@
     margin: 40px 0;
   }
   
-  form{
-    display:flex;
-    align-items:center;
-    flex-direction:column;
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    padding:15px 0;
-  }
-
-   ul{
-  margin-top: 10px; 
-  li{
-   color: var(--accent-color);
-   font-family: "Montserrat", inter;
-   font-size: 15px;
-   font-weight: 700;
-   padding: 3px 0;
-   &::before{
-    content: "-";
-    padding-right: 4px;
-   }
-  }
+    padding: 15px 0;
   }
   
-  input.text{
+  ul {
+    margin-top: 10px;
+
+    li {
+      color: var(--accent-color);
+      font-family: "Montserrat", inter;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 3px 0;
+
+      &::before {
+        content: "-";
+        padding-right: 4px;
+      }
+    }
+  }
+  
+  input.text {
     width: 250px;
     padding: 20px;
-    border:solid 2px var(--text-color);
+    border: solid 2px var(--text-color);
     border-radius: var(--lg-radius);
-    margin:7px;
-    &:focus{
+    margin: 7px;
+
+    &:focus {
       border: 2px solid var(--accent-color);
     }
   }
+  
+  section {
+    padding: 35px;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: clamp(2rem, 3vw, 4rem);
+    }
+    
+    .subtitle {
+      color: var(--accent-color);
+      text-align: center;
+      font-family: "Smooch", fantasy;
+    }
+    
+    p.text {
+      max-width: 500px;
+    }
+  }
+  
   
   .flex {
     display: flex;
@@ -122,14 +148,14 @@
     gap: 4px;
   }
   
-  .color-primary{
+  .color-primary {
     color: var(--accent-color) !important;
   }
   
-  .bg-transparent{
-    background:transparent !important;
+  .bg-transparent {
+    background: transparent !important;
   }
-
+  
   code.text {
     font-family: "Smooch Sans", monospace;
     font-size: 14px;

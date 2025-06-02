@@ -6,8 +6,7 @@
  <meta name="description" content="simplisearch is the solution that allows you to make search systeme with less time but with  results more relevant.">
  <meta name="keywords" content="simplisearch, search engine, data search, simple search, filter alghorithm, how can i filter my data, search my data, search engine for my data, search engine for my files, search engine for my documents, search engine for my images, search engine for my videos, search engine for my music">
  <meta name="author" content="simplisearch">
- <meta name="robots" content="index, follow">
- <meta name="googlebot" content="index, follow">
+ <meta name="google-site-verification" content="gH9bQeuPLDojJSYFWFa0kaLLzrjVlw8EhoprzHgo4VM" />
  <link rel="stylesheet" href="/libs/hljs/h.css" type="text/css" />
  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
  <link rel="stylesheet" href="/global.css" type="text/css" />
@@ -18,7 +17,7 @@
  <!-- _____________________________ -->
  
 <div class="nav-bar">
- <a class="logo" href="/">
+ <a class="logo" onclick="window.location.href = window.location.origin.includes('localhost') ? '/dev.html' : '/'">
  <img src="/assets/logo.png" alt="logo" class="logoIcon" />
 
 <style>
@@ -104,7 +103,7 @@
  <header>
  <h1>Smarter search systems. <br><b>Built in minutes.</b></h1>
  <p>
-  SimpliSearch helps you build ultra-fast, intelligent filters in seconds — with a lightweight algorithm that saves time and keeps your code clean.
+  Not just .filter(), SimpliSearch helps you build ultra-fast, intelligent search in minutes — with a lightweight algorithm that saves time and keeps your code clean.
  </p>
  <a href="/pages/login">
   <button class="btn-xyzx shadow" id="x">Start now (100% free)</button>
@@ -290,17 +289,21 @@
 </style>
 
  
- <br/> <br/>
+ <br/> 
 <section class="fade-in-section">
- <p class="subtitle">The problem</p>
- <h2>Too much time and code to build a filtering algorithm?</h2>
+ <p class="subtitle">The hidden complexity</p>
+ <h2>Search looks simple — until you actually build it</h2>
  <p class="text">
- Creating a great filtering algorithm can be hard. Even when you succeed, you'll still spend several hours or even days finishing it. This approach comes with many inconveniences, such as...
+ At first, a <code>.filter()</code> seems to do the job. 
+ But quickly, the challenges pile up: 
+ typos to handle, synonyms to support, relevance to score, fields to prioritize, and speed to maintain — even with thousands of entries. 
+ <br /><br />
+ What looked like a small feature becomes a complex system you need to reinvent... every time.
  </p>
  <div class="cardsa">
  <div class="card">
  <img src="assets/red-cross.svg" alt="icon" />
- <p>Hours spent filtering data</p>
+ <p>Overcomplicated logic for basic results</p>
 </div>
 
 <style>
@@ -324,7 +327,7 @@
 </style>
  <div class="card">
  <img src="assets/red-cross.svg" alt="icon" />
- <p>Unreliable algorithms</p>
+ <p>Hard to scale and maintain</p>
 </div>
 
 <style>
@@ -348,7 +351,79 @@
 </style>
  <div class="card">
  <img src="assets/red-cross.svg" alt="icon" />
- <p>Rewriting logic for every use case</p>
+ <p>Time lost rebuilding the same thing</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+ <div class="card">
+ <img src="assets/red-cross.svg" alt="icon" />
+ <p>Poor UX due to irrelevant results</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+ <div class="card">
+ <img src="assets/red-cross.svg" alt="icon" />
+ <p>Typos and synonyms breaking everything</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+ <div class="card">
+ <img src="assets/red-cross.svg" alt="icon" />
+ <p>Messy prioritization across fields</p>
 </div>
 
 <style>
@@ -391,38 +466,23 @@
 
 </section>
 
-<style>
- .fade-in-section{
- padding: 35px;
- margin: 100px 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- h2{
-  font-size: clamp(2rem, 3vw, 4rem);
- }
- .subtitle{
-  color: var(--accent-color);
-  text-align: center;
-  font-family: "Smooch", fantasy;
- }
- p.text{
-  max-width: 500px;
- }
- }
-</style>
+
 
 
 <section class="fade-in-section">
- <p class="subtitle">The dream</p>
- <h2>Get filtered data with just one line</h2>
+ <p class="subtitle">The solution</p>
+ <h2>Search, sort & filter — in one line</h2>
  <p class="text">
- SimpliSearch brings your dream to life. It allows you to search, sort, and filter your data with just one line of code.
+ SimpliSearch turns hours of work into a single, elegant line of code. 
+ No more tangled logic or reinventing the wheel. 
+ Just plug it in and get clean, relevant results — fast.
+ <br /><br />
+ Whether your dataset has 10 or 10,000 items, SimpliSearch handles typos, relevance, priorities and more — effortlessly.
  </p>
  <div class="cardsb">
  <div class="card">
  <img src="assets/green-check.svg" alt="icon" />
- <p>Save time and energy</p>
+ <p>Save hours on development</p>
 </div>
 
 <style>
@@ -446,7 +506,7 @@
 </style>
  <div class="card">
  <img src="assets/green-check.svg" alt="icon" />
- <p>Customize to your needs</p>
+ <p>Handle typos and synonyms automatically</p>
 </div>
 
 <style>
@@ -470,7 +530,79 @@
 </style>
  <div class="card">
  <img src="assets/green-check.svg" alt="icon" />
- <p>Cleaner, lighter codebase</p>
+ <p>Prioritize fields and relevance with ease</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+ <div class="card">
+ <img src="assets/green-check.svg" alt="icon" />
+ <p>Fast results, even on large datasets</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+ <div class="card">
+ <img src="assets/green-check.svg" alt="icon" />
+ <p>One simple API, countless use cases</p>
+</div>
+
+<style>
+ .card{
+ width: 90%;
+ height: 37px;
+ max-width: 420px;
+ border-radius: var(--sm-radius);
+ display: flex;
+ align-items: center;
+ padding: 3px 5px;
+ img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+ }
+ p{
+  font-weight: bold;
+ }
+ }
+</style>
+ <div class="card">
+ <img src="assets/green-check.svg" alt="icon" />
+ <p>Cleaner, maintainable codebase</p>
 </div>
 
 <style>
@@ -513,55 +645,43 @@
 
 </section>
 
-<style>
- .fade-in-section{
- padding: 35px;
- margin: 100px 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- h2{
-  font-size: clamp(2rem, 3vw, 4rem);
- }
- .subtitle{
-  color: var(--accent-color);
-  text-align: center;
-  font-family: "Smooch", fantasy;
- }
- p.text{
-  max-width: 500px;
- }
- }
-</style>
 
 
 <section class="fade-in-section">
  <p class="subtitle">What we provide</p>
- <h2>Flexibility to deliver better results in every case</h2>
+ <h2>Extreme flexibility. Precise results. Every time.</h2>
  <p class="text">
- SimpliSearch is built for maximum flexibility. That’s why we offer all the tools you need to create exceptional search systems for any situation and every type of query.
+ SimpliSearch gives you full control over how search works — without the headache.
+ Need to rank by relevance? Filter dynamically? Add custom logic or synonyms?
+ It’s all built in. One simple API, endless possibilities.
  </p>
- <br><br>
- <pre>
+ 
+ <br /><br />
+ <div class="center" style="max-width: 100vw">
+<pre>
 <code class="hljs shadow js">const todos = [...]
-
+  
  const searchCompletedTodos = () => {
- const results = search({ 
-  query: text, 
+  const results = search({
+  query: text,
   list: todos,
-  targets: [{key: "title", weight: 1}, {key: "description", weight: 0.5}],
-  when: (todo) => todo.completed === true,
+  // options 👇
+  targets: [
+   { key: "title", weight: 1 },
+   { key: "description", weight: 0.5 }
+  ],
+  when: todo => todo.completed === true,
   maxResults: 5,
   addedSynonims: [
    ["finish", "done", "complete"]
   ],
-  concat: todo => `&lt;div&gt; ${todo.title} &lt;/div&gt;`,
+  concat: todo => `&lt;div&gt;${todo.title}&lt;/div&gt;`,
   onFinish: ({ concated }) => {
-  suggestions.innerHTML = concated
+   suggestions.innerHTML = concated
   }
-  ...andOthers
- })
- }</code>
+  // ...and more
+  })
+  }</code>
 </pre>
 
 <style>
@@ -579,28 +699,9 @@
  }
  }
 </style>
+ </div>
 </section>
 
-<style>
- .fade-in-section{
- padding: 35px;
- margin: 100px 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- h2{
-  font-size: clamp(2rem, 3vw, 4rem);
- }
- .subtitle{
-  color: var(--accent-color);
-  text-align: center;
-  font-family: "Smooch", fantasy;
- }
- p.text{
-  max-width: 500px;
- }
- }
-</style>
 
 
 
@@ -632,26 +733,6 @@
 </a>
 </section>
 
-<style>
- .fade-in-section{
- padding: 35px;
- margin: 100px 0;
- display: flex;
- flex-direction: column;
- align-items: center;
- h2{
-  font-size: clamp(2rem, 3vw, 4rem);
- }
- .subtitle{
-  color: var(--accent-color);
-  text-align: center;
-  font-family: "Smooch", fantasy;
- }
- p.text{
-  max-width: 500px;
- }
- }
-</style>
 
  
  <div class="faq center">
@@ -667,7 +748,7 @@
  <details class="accordion">
  <summary>How do I use it?</summary>
  <div class="accordion-content">
- you can use SimpliSearch by creating your api key and call the <code class="text">createSearchSystem()</code> function with as param your api key. <a href="/guide">Learn more</a>
+ you can use SimpliSearch by creating your api key and call the <code class="text">createSearchSystem()</code> function with as param your api key. <a href="/pages/guide"><b>Learn more</b></a>
  </div>
  </details>
  
@@ -708,7 +789,7 @@
  <details class="accordion">
  <summary>Where is the documentation?</summary>
  <div class="accordion-content">
- <p>You can find the full documentation at: <a href="/guide">/guide</a></p>
+ <p>You can find the full documentation at: <a href="/pages/guide"><b>/pages/guide</b></a></p>
  </div>
  </details>
 </div>
@@ -802,7 +883,25 @@
 </main>
 
 <script type="module">
- const _0x517f75=_0x24fb;(function(_0x1e9ad3,_0x325dcb){const _0x5a4a71=_0x24fb,_0x926bba=_0x1e9ad3();while(!![]){try{const _0x385060=parseInt(_0x5a4a71(0x1a5))/0x1*(parseInt(_0x5a4a71(0x1a9))/0x2)+-parseInt(_0x5a4a71(0x1a3))/0x3*(parseInt(_0x5a4a71(0x19d))/0x4)+-parseInt(_0x5a4a71(0x1a6))/0x5*(parseInt(_0x5a4a71(0x1af))/0x6)+parseInt(_0x5a4a71(0x1ad))/0x7*(parseInt(_0x5a4a71(0x1aa))/0x8)+-parseInt(_0x5a4a71(0x1a4))/0x9*(parseInt(_0x5a4a71(0x1a8))/0xa)+parseInt(_0x5a4a71(0x1a0))/0xb+parseInt(_0x5a4a71(0x1ac))/0xc;if(_0x385060===_0x325dcb)break;else _0x926bba['push'](_0x926bba['shift']());}catch(_0x5897d4){_0x926bba['push'](_0x926bba['shift']());}}}(_0x2e14,0x47ad1));import{createClient}from'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';const t02x=createClient('https://wrlaxgtgmiclprseeqri.supabase.co',_0x517f75(0x1a2)),Auth=t02x[_0x517f75(0x19c)],Select=(_0x35f123,_0x5eccd8)=>t02x['from'](_0x35f123)[_0x517f75(0x1a7)](_0x5eccd8),{data:{user},notExist}=await Auth[_0x517f75(0x1ab)]();if(user){const id=user['id'],{data:users,error}=await Select(_0x517f75(0x19e),'*');if(!error){const userInfos=users[_0x517f75(0x1a1)](_0x1854dd=>_0x1854dd['id']===user['id']);userInfos&&(window[_0x517f75(0x1ae)][_0x517f75(0x19f)]='/app/interface/home/');}}function _0x24fb(_0x198d4b,_0x1b33cc){const _0x2e14b7=_0x2e14();return _0x24fb=function(_0x24fb0e,_0x297313){_0x24fb0e=_0x24fb0e-0x19c;let _0x3690c0=_0x2e14b7[_0x24fb0e];return _0x3690c0;},_0x24fb(_0x198d4b,_0x1b33cc);}function _0x2e14(){const _0x39847b=['10679844GaISxW','1637657gKNxuo','location','3179904TaAbZG','auth','58768JognXd','users','href','1704230eXspQY','find','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndybGF4Z3RnbWljbHByc2VlcXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDk4NzcsImV4cCI6MjA2MjU4NTg3N30.1WBo6M1iNd4kRo51P5JuKGDWsncpxWXQ7NfAkZKTUd0','102BwUozg','658899YtBeFe','1epRdsq','5IYqjjf','select','40NOjFXi','674146INQeOx','8vJvXmu','getUser'];_0x2e14=function(){return _0x39847b;};return _0x2e14();}
+ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+ 
+ const supabase = createClient('https://wrlaxgtgmiclprseeqri.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndybGF4Z3RnbWljbHByc2VlcXJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcwMDk4NzcsImV4cCI6MjA2MjU4NTg3N30.1WBo6M1iNd4kRo51P5JuKGDWsncpxWXQ7NfAkZKTUd0')
+ 
+ const Auth = supabase.auth
+ const Select = (from, rows) => supabase.from(from).select(rows)
+ 
+ const { data: { user }, notExist } = await Auth.getUser()
+ if (user) {
+ const id = user.id
+ const { data: users, error } = await Select("users", "*")
+ 
+ if (!error) {
+  const userInfos = users.find(u => u.id === user.id)
+  if (userInfos) {
+   window.location.href = '/app/interface/home/'
+  }
+ }
+ }
 </script>
 
 <footer style="

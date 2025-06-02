@@ -1,4 +1,4 @@
-pre code.hljs{display:block;overflow-x:auto;}code.hljs{padding:12px 15px}
+pre code.hljs{display:block;overflow-x:auto;line-height: 17px;}code.hljs{padding:12px 15px}
 pre code.hljs::-webkit-scrollbar{
  display: none;
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="simplisearch is the solution that allows you to make search systeme with less time but with  results more relevant.">
+ <meta name="keywords" content="simplisearch, search engine, data search, simple search, filter alghorithm, how can i filter my data, search my data, search engine for my data, search engine for my files, search engine for my documents, search engine for my images, search engine for my videos, search engine for my music">
+ <meta name="author" content="simplisearch">
+ <meta name="robots" content="index, follow">
+ <meta name="googlebot" content="index, follow">
+ <link rel="stylesheet" href="/global.css" type="text/css" />
+ <link rel="icon" href="/favicon.ico" type="image/x-icon">
+ <title>why ? • simplisearch</title>
+ <style>
+  .citation {
+   padding: 5px;
+   border-left: solid 2px var(--accent-color);
+   translate: 20px;
+   margin: 10px 0;
+  }
+  li, ul{
+   color: var(--text-color) !important;
+   font-size: 12px;
+  }
+ </style>
+</head>
+
+<body>
+ <header class="">
+  <h1>Why SimpliSearch ??</h1>
+  <p class="text">
+   We will explain you why simplisearch exist and why making a search/filter system is so haaard
+  </p>
+ </header>
+ 
+ <main>
+  <br><br>
+  
+  <section>
+   <p class="subtitle">Why Search Is a Real Pain for JavaScript Developers</p>
+   <h2>1. It's not just a <b>.filter()</b></h2>
+   
+   <p class="text">
+    
+   <ul>
+    <li>
+     Combine multiple criteria (e.g., "name includes X", "price < Y", "tags include Z" ) </li>
+      
+    <li>Support multiple data types (strings, numbers, dates, booleans…)
+    </li>
+    
+    <li>Handle null, undefined, empty strings without breaking everything</li>
+    
+    <li>Do fuzzy search (typo-tolerant)</li>
+    
+    <li>Sort, paginate, and filter across multiple fields</li>
+    
+    <li>Maintain decent performance on large datasets</li>
+   </ul>
+   
+   …it gets messy — fast. Especially in the browser.
+   
+   </p>
+  </section>
+  
+  <section>
+   <h2>2. It's a common need, but rarely reusable</h2>
+   <p class="text">
+    Every JS developer builds UIs that filter arrays of objects:
+    <b>Dashboards, admin panels, product lists, search interfaces… </b>
+    
+    But every time, you
+   <ul>
+    <li>Rewrite filtering logic manually</li>
+    
+    <li>Duplicate and tweak code across projects</li>
+    
+    <li>Struggle with edge cases</li>
+    
+    <li>End up with brittle, messy, untestable logic</li>
+   </ul>
+   
+   <div class="citation">
+    You're wasting time reinventing the same wheel again and again.
+   </div>
+   </p>
+  </section>
+  
+  <section>
+   <h2> ✅ That's here that SimpliSearch come</h2>
+   <p class="text">
+    Imagine a library that is
+    
+   <ul>
+    <li> Lightweight (~5 KB gzip)</li>
+    
+    <li>Written in pure JS/TypeScript</li>
+    
+    <li>Usable on server or the browser</li>
+    
+    <li>Covers 95% of real-world filtering use cases</li>
+   </ul>
+   
+   Has a dead-simple API like this:
+   
+   <pre>
+    <code class="hljs js">
+   search({
+   data: items,
+   filters: {
+   name: 'john',
+   price: { lt: 100 },
+   active: true
+   },
+   sortBy: 'date',
+   fuzzy: true,
+   limit: 10
+   });
+    </code>
+   </pre>
+   
+   No backends. No configs. Just results.
+   That’s what SimpliSearch delivers.
+   
+   </p>
+  </section>
+  
+  <section>
+   <h2>Search Isn’t Simple. But It Should Be.</h2>
+   <p class="text">
+    Building a real search/filter system sounds easy…
+    But it’s full of:
+    <ul>
+    <li>Flexibility traps</li>
+    
+    <li>Type headaches</li>
+    
+    <li>UX edge cases</li>
+    
+    
+    SimpliSearch aims to become the standard tool for devs who just want:
+    
+    <li>Clean code</li>
+    
+    <li>Fast filtering</li>
+    
+    <li>A frictionless developer experience</li>
+    </ul>
+   </p>
+  </section>
+</body>
+
+</html>

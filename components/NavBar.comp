@@ -2,7 +2,7 @@
 <import name="Logo" from="@components/Logo.comp" />
 
 <div class="nav-bar">
-  <a class="logo" href="/">
+  <a class="logo" onclick="window.location.href = window.location.origin.includes('localhost') ? '/dev.html' : '/'">
     <Logo />
     <p>simplisearch</p>
   </a>

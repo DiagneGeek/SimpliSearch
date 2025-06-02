@@ -11,7 +11,7 @@
  <details class="accordion">
   <summary>How do I use it?</summary>
   <div class="accordion-content">
-   you can use SimpliSearch by creating your api key and call the <code class="text">createSearchSystem()</code> function with as param your api key. <a href="/guide">Learn more</a>
+   you can use SimpliSearch by creating your api key and call the <code class="text">createSearchSystem()</code> function with as param your api key. <a href="/pages/guide"><b>Learn more</b></a>
   </div>
  </details>
  
@@ -52,7 +52,7 @@
  <details class="accordion">
   <summary>Where is the documentation?</summary>
   <div class="accordion-content">
-   <p>You can find the full documentation at: <a href="/guide">/guide</a></p>
+   <p>You can find the full documentation at: <a href="/pages/guide"><b>/pages/guide</b></a></p>
   </div>
  </details>
 </div>

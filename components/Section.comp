@@ -2,23 +2,3 @@
   $children
 </section>
 
-<style>
-  .fade-in-section{
-    padding: 35px;
-    margin: 100px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2{
-      font-size: clamp(2rem, 3vw, 4rem);
-    }
-    .subtitle{
-      color: var(--accent-color);
-      text-align: center;
-      font-family: "Smooch", fantasy;
-    }
-    p.text{
-      max-width: 500px;
-    }
-  }
-</style>
