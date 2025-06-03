@@ -16,9 +16,9 @@
 </NavBar>
 <main>
   <Header>
-    <h1>Smarter search systems. <br><b>Built in minutes.</b></h1>
+    <h1>Why lose hours building something that<br>  <span style="border-bottom:solid 3px var(--accent-color);"><b>takes minutes</b></span> with SimpliSearch?</h1>
     <p>
-      Not just .filter(), SimpliSearch helps you build ultra-fast, intelligent search in minutes — with a lightweight algorithm that saves time and keeps your code clean.
+      Stop wasting time coding your own search system. SimpliSearch delivers a fast, flexible and smart alghorithm — ready to use in one simple function.
     </p>
     <a href="/pages/login">
       <Btn padding="20px 30px" id="x" class="shadow">Start now (100% free)</Btn>
@@ -53,7 +53,7 @@
     if (!error) {
       const userInfos = users.find(u => u.id === user.id)
       if (userInfos) {
-         window.location.href = '/app/interface/home/'
+         // window.location.href = '/app/interface/home/'
       }
     }
   }
