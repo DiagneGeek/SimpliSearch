@@ -3,8 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="simplisearch is the solution that allows you to make search systeme with less time but with  results more relevant.">
- <meta name="keywords" content="simplisearch, search engine, data search, simple search, filter alghorithm, how can i filter my data, search my data, search engine for my data, search engine for my files, search engine for my documents, search engine for my images, search engine for my videos, search engine for my music">
+ <meta name="description" content="simplisearch allows you to gain  time and energy by providing a powerful smart alghorithm to build your search systems ultra fast.">
+ <meta name="keywords" content="simplisearch, search engine, data search, simple search, filter alghorithm, how can i filter my data, search my data, search engine for my data, search engine for my files, search engine for my documents, search engine for my images, search engine for my videos, search engine for my music, filtering my data, how to filter my data">
  <meta name="author" content="simplisearch">
  <meta name="google-site-verification" content="gH9bQeuPLDojJSYFWFa0kaLLzrjVlw8EhoprzHgo4VM" />
  <link rel="stylesheet" href="/libs/hljs/h.css" type="text/css" />
@@ -106,7 +106,7 @@
   Stop wasting time coding your own search system. SimpliSearch delivers a fast, flexible and smart alghorithm — ready to use in one simple function.
  </p>
  <a href="/pages/login">
-  <button class="btn-xyzx shadow" id="x">Start now (100% free)</button>
+  <button class="btn-xyzx shadow cta" id="x">Start now (100% free)</button>
 
 <style>
  .btn-xyzx{
@@ -712,7 +712,7 @@
  With SimpliSearch, you can build a search system in just one line of code. Save time and energy for your other projects. Never fear building a search system again!
  </p>
  <br>
- <a href="pages/login"><button class="btn-xyzd $class" id="d">Join the dream!</button>
+ <a href="pages/login"><button class="btn-xyzd cta $class" id="d">Join the dream!</button>
 
 <style>
  .btn-xyzd{
@@ -934,10 +934,14 @@
  
  
  
- 
  <script type="module">
   import { init } from './libs/hljs/h.js'
+  import {useMyData} from 'https://useyourdata.netlify.app/api/index.js'
   init()
+  useMyData({
+   CTAs: [...document.querySelectorAll('.cta')],
+   exclude: '123'
+  })
  </script>
 </body>
 

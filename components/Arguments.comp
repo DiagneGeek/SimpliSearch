@@ -13,7 +13,7 @@
   <p class="text">
     At first, a <code>.filter()</code> seems to do the job.  
     But quickly, the challenges pile up:  
-    typos to handle, synonyms to support, relevance to score, fields to prioritize, and speed to maintain — even with thousands of entries.  
+    typos to handle, synonims to support, relevance to score, fields to prioritize, and speed to maintain — even with thousands of entries.  
     <br /><br />
     What looked like a small feature becomes a complex system you need to reinvent... every time.
   </p>
@@ -22,7 +22,7 @@
     <Card text="Hard to scale and maintain" icon="assets/red-cross.svg" />
     <Card text="Time lost rebuilding the same thing" icon="assets/red-cross.svg" />
     <Card text="Poor UX due to irrelevant results" icon="assets/red-cross.svg" />
-    <Card text="Typos and synonyms breaking everything" icon="assets/red-cross.svg" />
+    <Card text="Typos and synonims breaking everything" icon="assets/red-cross.svg" />
     <Card text="Messy prioritization across fields" icon="assets/red-cross.svg" />
   </Cards>
 </Section>
@@ -40,7 +40,7 @@
   </p>
   <Cards color="green" border="oklch(69.6% 0.17 162.48)" id="b">
     <Card text="Save hours on development" icon="assets/green-check.svg" />
-    <Card text="Handle typos and synonyms automatically" icon="assets/green-check.svg" />
+    <Card text="Handle typos and synonims automatically" icon="assets/green-check.svg" />
     <Card text="Prioritize fields and relevance with ease" icon="assets/green-check.svg" />
     <Card text="Fast results, even on large datasets" icon="assets/green-check.svg" />
     <Card text="One simple API, countless use cases" icon="assets/green-check.svg" />
@@ -53,7 +53,7 @@
   <h2>Extreme flexibility. Precise results. Every time.</h2>
   <p class="text">
     SimpliSearch gives you full control over how search works — without the headache.
-    Need to rank by relevance? Filter dynamically? Add custom logic or synonyms?
+    Need to rank by relevance? Filter dynamically? Add custom logic or synonims?
     It’s all built in. One simple API, endless possibilities.
   </p>
   
@@ -95,6 +95,6 @@
     With SimpliSearch, you can build a search system in just one line of code. Save time and energy for your other projects. Never fear building a search system again!
   </p>
   <br>
-  <a href="pages/login"><Btn padding="14px" id="d">Join the dream!</Btn></a>
+  <a href="pages/login" class="cta"><Btn padding="14px" id="d">Join the dream!</Btn></a>
 </Section>
 

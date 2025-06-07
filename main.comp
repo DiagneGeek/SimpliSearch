@@ -20,7 +20,7 @@
     <p>
       Stop wasting time coding your own search system. SimpliSearch delivers a fast, flexible and smart alghorithm — ready to use in one simple function.
     </p>
-    <a href="/pages/login">
+    <a href="/pages/login" class="cta">
       <Btn padding="20px 30px" id="x" class="shadow">Start now (100% free)</Btn>
     </a>
     
